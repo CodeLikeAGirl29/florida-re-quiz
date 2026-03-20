@@ -1,0 +1,596 @@
+[
+  {
+    "cat": "Legal Theory",
+    "q": "In which mortgage lending theory does the borrower NOT retain title during the loan period?",
+    "options": [
+      "Lien theory",
+      "Title theory",
+      "Bank theory",
+      "Loan theory"
+    ],
+    "correct": 1
+  },
+  {
+    "cat": "Legal Theory",
+    "q": "Which describes a non-freehold estate that includes a definite specified amount of time?",
+    "options": [
+      "Tenancy at will",
+      "Estate by the entireties",
+      "Life estate",
+      "Estate for years"
+    ],
+    "correct": 3
+  },
+  {
+    "cat": "Titles",
+    "q": "What is NOT true of an abstract of title?",
+    "options": [
+      "It is a complete search of recorded documents",
+      "It is a complete successive record of ownership (Chain of Title)",
+      "An opinion of title is executed by an attorney",
+      "It helps determine if a title is marketable"
+    ],
+    "correct": 1
+  },
+  {
+    "cat": "Legal",
+    "q": "Which clause in a deed states the grantor owns the property and has the legal right to convey it?",
+    "options": [
+      "Seisin",
+      "Constructive notice",
+      "Actual notice",
+      "Habendum clause"
+    ],
+    "correct": 0
+  },
+  {
+    "cat": "Legal Descriptions",
+    "q": "Which statement is FALSE concerning legal descriptions?",
+    "options": [
+      "Every section in a township contains 43,560 square feet",
+      "Lot and block is used for recorded plat maps",
+      "Metes and bounds uses a POB and compass degrees",
+      "The principal meridian runs north/south through Tallahassee"
+    ],
+    "correct": 0
+  },
+  {
+    "cat": "Legal Theory",
+    "q": "Which statement is INCORRECT regarding mortgage lending theories?",
+    "options": [
+      "In Lien Theory states, the borrower does not retain ownership",
+      "Florida practices Lien Theory",
+      "In Title Theory states, the borrower does not retain ownership",
+      "In Lien Theory states, the borrower does retain ownership"
+    ],
+    "correct": 0
+  },
+  {
+    "cat": "Legal",
+    "q": "Which statement is FALSE concerning Florida Statutes and FREC rules?",
+    "options": [
+      "The FREC rules are Chapter 61J2",
+      "Real estate laws are F.S. 475",
+      "The HOA disclosure law is F.S. 720",
+      "The DBPR laws are F.S. 120"
+    ],
+    "correct": 3
+  },
+  {
+    "cat": "Statute of Frauds",
+    "q": "Which of the following is FALSE regarding the Statute of Frauds?",
+    "options": [
+      "Deeds and mortgages must be in writing",
+      "All contracts must be in writing to be enforceable",
+      "It does not apply to a 3-month listing",
+      "It applies to option contracts"
+    ],
+    "correct": 1
+  },
+  {
+    "cat": "Disclosures",
+    "q": "A broker knows the roof leaks. He satisfies his legal obligation by telling the buyer:",
+    "options": [
+      "The roof leaks",
+      "The buyer should order an inspection",
+      "Nothing, if it is an 'As-Is' contract",
+      "Nothing, if he is a Transaction Broker"
+    ],
+    "correct": 0
+  },
+  {
+    "cat": "Disclosures",
+    "q": "A seller tells a broker in confidence that the roof leaks. Which of the following applies?",
+    "options": [
+      "A Single Agent is not required to disclose it",
+      "The broker is always required to disclose it to all buyers",
+      "Disclosure is not required if it is an 'As-Is' contract",
+      "The broker has an ethical but not a legal obligation to disclose"
+    ],
+    "correct": 1
+  },
+  {
+    "cat": "Agency",
+    "q": "To show a 'Single Agent' buyer a property listed by the same 'Single Agent' brokerage, both parties must:",
+    "options": [
+      "Sign a Dual Agency waiver",
+      "Transition to a Transaction Broker relationship",
+      "Cancel the buyer agreement",
+      "Pay an extra commission fee"
+    ],
+    "correct": 1
+  },
+  {
+    "cat": "Agency",
+    "q": "Which statement about Florida agency relationships is CORRECT?",
+    "options": [
+      "The presumed relationship is Single Agency",
+      "No Brokerage disclosure must be given before showing property",
+      "A Single Agent can represent both parties with consent",
+      "Transaction Brokers have a fiduciary duty"
+    ],
+    "correct": 1
+  },
+  {
+    "cat": "Homestead",
+    "q": "Which statement is FALSE regarding the Florida Constitutional Homestead?",
+    "options": [
+      "It provides protection of family, homestead, and tax exemptions",
+      "Both spouses must sign the deed even if only one is on the title",
+      "Homestead is protected from forced sale for nonpayment of property taxes",
+      "Homes over $75k get $50k exemption from city/county and $25k from schools"
+    ],
+    "correct": 2
+  },
+  {
+    "cat": "Property Management",
+    "q": "Which statement is FALSE concerning Florida landlord security deposit rules?",
+    "options": [
+      "Landlords have three options for holding deposits",
+      "If no claim is made, the deposit must be returned in 15 days",
+      "If a claim is made, the landlord has 15 days to notify the tenant",
+      "Banks used to hold deposits must be located in Florida"
+    ],
+    "correct": 2
+  },
+  {
+    "cat": "Contracts",
+    "q": "What does 'Novation' mean in contract law?",
+    "options": [
+      "A seller is obligated to list with a broker",
+      "Agreement to substitute a new party for an original one",
+      "A contract where only one party is bound to perform",
+      "A legal remedy for breach of contract"
+    ],
+    "correct": 1
+  },
+  {
+    "cat": "Fair Housing",
+    "q": "Which statement is INCORRECT regarding Fair Housing violations?",
+    "options": [
+      "Steering involves channeling buyers to certain areas",
+      "Blockbusting involves scaring owners into selling",
+      "Redlining is a discriminatory lending practice",
+      "Steering is when sellers are encouraged to list properties"
+    ],
+    "correct": 3
+  },
+  {
+    "cat": "Antitrust",
+    "q": "Two brokers meeting to set commission rates for the upcoming year is a violation of:",
+    "options": [
+      "RESPA",
+      "The Truth in Lending Act (TILA)",
+      "Anti Trust Laws",
+      "The Fair Housing Act"
+    ],
+    "correct": 2
+  },
+  {
+    "cat": "Federal Law",
+    "q": "A homeowner is selling a house built in the 1960s. Which statement is FALSE?",
+    "options": [
+      "The homeowner is responsible for EPA disclosures and pamphlets",
+      "The sales associate is legally responsible for the disclosure and pamphlet",
+      "The buyer must acknowledge receiving the lead-based paint disclosure",
+      "The buyer is not required to inspect the property for lead"
+    ],
+    "correct": 1
+  },
+  {
+    "cat": "Licensing",
+    "q": "If a sales associate fails to complete the 45-hour post-licensing course by the first expiration, the license is:",
+    "options": [
+      "Involuntary Inactive",
+      "Voluntary Inactive",
+      "Null and Void",
+      "Suspended"
+    ],
+    "correct": 2
+  },
+  {
+    "cat": "Licensing",
+    "q": "Who must complete the 14 hours of continuing education every two years?",
+    "options": [
+      "Only active licensees",
+      "Only inactive licensees",
+      "Both active and inactive licensees",
+      "Only brokers"
+    ],
+    "correct": 2
+  },
+  {
+    "cat": "Brokerage Office",
+    "q": "Taking ORIGINAL listing contracts when leaving a brokerage is considered:",
+    "options": [
+      "Breach of Trust",
+      "Culpable Negligence",
+      "Larceny",
+      "Commingling"
+    ],
+    "correct": 2
+  },
+  {
+    "cat": "License Law",
+    "q": "Which statement is FALSE regarding Florida's continuing education requirements?",
+    "options": [
+      "Both active and inactive associates must do 45-hr post-license",
+      "If a broker dies, associates become involuntarily inactive",
+      "Only active associates must complete the 45-hr post-license course",
+      "Failure to do 14-hr CE results in involuntary inactive status"
+    ],
+    "correct": 2
+  },
+  {
+    "cat": "License Law",
+    "q": "A seller is thrilled with a sales associate's performance. What can the seller legally do for the associate directly?",
+    "options": [
+      "Give the associate a cash bonus",
+      "Give the associate a gift worth up to $25",
+      "Express her thanks to the sales associate",
+      "Give the associate a bottle of wine"
+    ],
+    "correct": 2
+  },
+  {
+    "cat": "License Law",
+    "q": "Who is the only person that can legally pay a sales associate for real estate services?",
+    "options": [
+      "The seller in the transaction",
+      "The buyer in the transaction",
+      "The associate's employer (Broker or Owner-Developer)",
+      "The DBPR"
+    ],
+    "correct": 2
+  },
+  {
+    "cat": "Brokerage Operations",
+    "q": "A broker wants to close one branch office and open a new one at a different location. Which applies?",
+    "options": [
+      "He can transfer the registration to the new office",
+      "He must register the new location and pay a fee",
+      "Brokers are limited to one principal office only",
+      "Branch offices do not require registration"
+    ],
+    "correct": 1
+  },
+  {
+    "cat": "Brokerage Operations",
+    "q": "When advertising on the internet, where must the brokerage firm's name appear?",
+    "options": [
+      "Adjacent to or immediately above/below the point of contact info",
+      "Anywhere on the page as long as it is visible",
+      "On a separate 'About Us' page only",
+      "Only the licensee's name is required for internet ads"
+    ],
+    "correct": 0
+  },
+  {
+    "cat": "License Law",
+    "q": "Sales associate Linda has 26 months of experience. Which of the following is INCORRECT regarding her options?",
+    "options": [
+      "She can become a broker associate and later open her own office",
+      "She can become a general partner in her current brokerage firm",
+      "She can quit and go to work for a different brokerage",
+      "She can buy stock in her current brokerage firm"
+    ],
+    "correct": 1
+  },
+  {
+    "cat": "License Law",
+    "q": "What is the penalty for unlicensed activity or falsifying a DBPR application?",
+    "options": [
+      "1st degree misdemeanor",
+      "2nd degree misdemeanor",
+      "3rd degree felony",
+      "Administrative fine only"
+    ],
+    "correct": 2
+  },
+  {
+    "cat": "License Law",
+    "q": "What recourse does a sales associate have if their broker refuses to pay an earned commission?",
+    "options": [
+      "Request an Escrow Disbursement Order from the FREC",
+      "Sue the Seller directly",
+      "Sue the Broker in a civil court",
+      "File a claim with the Real Estate Recovery Fund"
+    ],
+    "correct": 2
+  },
+  {
+    "cat": "Finance",
+    "q": "What is the effective yield to a lender if a 5% loan has 4 discount points purchased?",
+    "options": [
+      "5.25%",
+      "5.5%",
+      "5.75%",
+      "6.0%"
+    ],
+    "correct": 1
+  },
+  {
+    "cat": "Finance",
+    "q": "On a 30-year fixed rate fully amortized mortgage, most of the payment at the END of the term goes to:",
+    "options": [
+      "Interest",
+      "Principal",
+      "Taxes",
+      "Insurance"
+    ],
+    "correct": 1
+  },
+  {
+    "cat": "Closing",
+    "q": "Which is FALSE concerning the Closing Disclosure (CD)?",
+    "options": [
+      "Binder deposit is a credit to buyer and debit to seller",
+      "Intangible tax is a debit to the buyer",
+      "Unpaid property taxes are a debit to seller/credit to buyer",
+      "The binder deposit is a credit to the buyer"
+    ],
+    "correct": 0
+  },
+  {
+    "cat": "Finance",
+    "q": "What is the effective yield to a lender if a borrower has a 4% interest rate and pays 6 discount points?",
+    "options": [
+      "4.75%",
+      "5%",
+      "3.25%",
+      "4.5%"
+    ],
+    "correct": 0
+  },
+  {
+    "cat": "Finance",
+    "q": "Which statement is FALSE concerning the mortgage markets?",
+    "options": [
+      "The primary market involves the borrower and lender",
+      "The secondary market originates new loans for borrowers",
+      "Fannie Mae is a major contributor in the secondary market",
+      "The secondary market provides liquidity to the primary market"
+    ],
+    "correct": 1
+  },
+  {
+    "cat": "Finance",
+    "q": "Concerning the FHA and the VA, which statement is TRUE?",
+    "options": [
+      "FHA is a government guaranteed loan",
+      "VA is a government insured loan",
+      "A veteran's widow is eligible for VA benefits if she does not remarry",
+      "FHA loans require a VA funding fee"
+    ],
+    "correct": 2
+  },
+  {
+    "cat": "Math",
+    "q": "What is the formula for calculating documentary stamp taxes on the deed in Florida?",
+    "options": [
+      "Sales price / 100 (round up) * .70",
+      "Mortgage price / 100 (round up) * .35",
+      "Sales price / 100 (round up) * .35",
+      "Total mortgages * .0020"
+    ],
+    "correct": 0
+  },
+  {
+    "cat": "Math",
+    "q": "A 175-acre tract has 25% reserved for streets. Lot size is 7,500 sq ft. How many lots are available?",
+    "options": [
+      "254",
+      "762",
+      "813",
+      "1,106"
+    ],
+    "correct": 1
+  },
+  {
+    "cat": "Math",
+    "q": "If a lot is 250' x 300' and paving costs $20/ft (City pays 40%), what is the owner's assessment?",
+    "options": [
+      "$1,500",
+      "$1,200",
+      "$3,000",
+      "$5,000"
+    ],
+    "correct": 0
+  },
+  {
+    "cat": "Math",
+    "q": "A house sold for $450k. The associate got 70% of commission ($22,050). What was the commission rate?",
+    "options": [
+      "6%",
+      "7%",
+      "7.5%",
+      "8%"
+    ],
+    "correct": 1
+  },
+  {
+    "cat": "Math",
+    "q": "How many acres are in the N 1/2 of the SE 1/4 of the NW 1/4 AND the N 1/2 of the S 1/2 of the SE 1/4 of the N 1/4?",
+    "options": [
+      "10 acres",
+      "20 acres",
+      "30 acres",
+      "80 acres"
+    ],
+    "correct": 2
+  },
+  {
+    "cat": "Math",
+    "q": "A property sold for $497,000. The associate got 75% of the commission ($22,365). What was the total commission rate?",
+    "options": [
+      "5%",
+      "6%",
+      "7%",
+      "8%"
+    ],
+    "correct": 1
+  },
+  {
+    "cat": "Math",
+    "q": "A 75-acre tract requires 10,000 sq ft per lot. 20% is reserved for streets/sidewalks. How many lots are available?",
+    "options": [
+      "632 lots",
+      "261 lots",
+      "450 lots",
+      "285 lots"
+    ],
+    "correct": 1
+  },
+  {
+    "cat": "Math",
+    "q": "A 3-story building has 100' x 50' floors. If 30% of each floor is unusable, how many 5' x 5' bins will fit?",
+    "options": [
+      "250 bins",
+      "700 bins",
+      "420 bins",
+      "270 bins"
+    ],
+    "correct": 2
+  },
+  {
+    "cat": "Math",
+    "q": "An associate keeps 70% of commission. If they received $29,750 on an $850k sale, what was the commission rate?",
+    "options": [
+      "6%",
+      "7%",
+      "8%",
+      "5%"
+    ],
+    "correct": 3
+  },
+  {
+    "cat": "Math",
+    "q": "A lot is 80' x 125'. Paving costs $30/ft. The city pays 15%. What is the homeowner's special assessment?",
+    "options": [
+      "$2,040",
+      "$1,020",
+      "$2,800",
+      "$2,000"
+    ],
+    "correct": 1
+  },
+  {
+    "cat": "Math",
+    "q": "Closing is Jan 10. Buyer assumes $209k loan at 4.5%. Closing day belongs to buyer. What is the proration?",
+    "options": [
+      "$231.90 debit seller, credit buyer",
+      "$231.90 debit buyer, credit seller",
+      "$257.67 debit seller, credit buyer",
+      "$257.67 debit buyer, credit seller"
+    ],
+    "correct": 0
+  },
+  {
+    "cat": "Math",
+    "q": "What is the effective yield to the lender if the borrower is charged 3% interest and buys 6 discount points?",
+    "options": [
+      "6 1/2%",
+      "3 1/2%",
+      "3 3/4%",
+      "3 1/8%"
+    ],
+    "correct": 2
+  },
+  {
+    "cat": "Math",
+    "q": "If a man can borrow $286,000 and this is 2.5 times his salary, how much is his weekly pay?",
+    "options": [
+      "$4,100",
+      "$1,600",
+      "$1,110",
+      "$2,200"
+    ],
+    "correct": 3
+  },
+  {
+    "cat": "Math",
+    "q": "Calculate the total acres and square feet for: The S 1/4 of the N 1/4 of the E 1/4 of the SW 1/2 AND the S 1/2 of the E 1/2 of Section 11.",
+    "options": [
+      "165 acres and 2,052,000 sq ft",
+      "165 acres and 7,187,400 sq ft",
+      "120 acres and 5,227,200 sq ft",
+      "125 acres and 7,000,000 sq ft"
+    ],
+    "correct": 1
+  },
+  {
+    "cat": "Math",
+    "q": "How many acres are in the N 1/2 of the S 1/2 of Section 11?",
+    "options": [
+      "160 acres",
+      "140 acres",
+      "178 acres",
+      "165 acres"
+    ],
+    "correct": 0
+  },
+  {
+    "cat": "Math",
+    "q": "A developer has 20 lots that are 21,780 square feet each. How many acres does he own?",
+    "options": [
+      "20 acres",
+      "10 acres",
+      "75 acres",
+      "40 acres"
+    ],
+    "correct": 1
+  },
+  {
+    "cat": "Appraisal",
+    "q": "Subject: 3/2 with fireplace. Comp: 3/3 no fireplace. Bath = $5k, Fireplace = $2k. What is the adjustment?",
+    "options": [
+      "Add $7,000 to the comparable",
+      "Subtract $3,000 from the comparable",
+      "Subtract $3,000 from the subject",
+      "Add $3,000 to the subject"
+    ],
+    "correct": 1
+  },
+  {
+    "cat": "Appraisal",
+    "q": "A sales associate is hired to perform an appraisal for a fee. Which is TRUE?",
+    "options": [
+      "They cannot legally perform appraisals",
+      "They are not required to follow USPAP",
+      "USPAP stands for 'Protected' Appraisal Practice",
+      "They can perform it if it's not a federally related transaction"
+    ],
+    "correct": 3
+  },
+  {
+    "cat": "Property Rights",
+    "q": "Which rights are associated with water flowing through your property, such as a river or stream?",
+    "options": [
+      "Riparian rights",
+      "Littoral rights",
+      "Subsurface rights",
+      "Mineral rights"
+    ],
+    "correct": 0
+  }
+]

@@ -1,0 +1,153 @@
+:root {
+  --accent: #3498db;
+  --success: #2ecc71;
+  --error: #e74c3c;
+  --dark: #2c3e50;
+  --glass: rgba(255, 255, 255, 0.95);
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  font-family: 'Inter', sans-serif;
+}
+
+.quiz-container {
+  background: var(--glass);
+  width: 90%;
+  max-width: 550px;
+  padding: 40px;
+  border-radius: 24px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+  position: relative;
+  z-index: 10;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 1.4rem;
+  color: var(--dark);
+  margin: 0;
+}
+
+.stats {
+  font-weight: 700;
+  color: var(--accent);
+}
+
+/* Progress Bar */
+.progress-container {
+  background: #eee;
+  height: 8px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  height: 100%;
+  width: 0%;
+  background: var(--accent);
+  transition: width 0.4s ease;
+}
+
+.category {
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 1px;
+  color: #999;
+  margin-bottom: 10px;
+}
+
+#question-text {
+  font-size: 1.25rem;
+  color: var(--dark);
+  margin-bottom: 25px;
+  line-height: 1.5;
+}
+
+/* Option Buttons */
+.options {
+  display: grid;
+  gap: 12px;
+}
+
+.option-btn {
+  padding: 16px 20px;
+  border: 2px solid #eef2f3;
+  border-radius: 12px;
+  background: white;
+  cursor: pointer;
+  text-align: left;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.option-btn:hover:not(:disabled) {
+  border-color: var(--accent);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.option-btn.correct {
+  background: var(--success);
+  color: white;
+  border-color: var(--success);
+}
+
+.option-btn.wrong {
+  background: var(--error);
+  color: white;
+  border-color: var(--error);
+}
+
+/* Feedback & Next */
+.hidden {
+  display: none;
+}
+
+#feedback-area {
+  margin-top: 25px;
+  text-align: center;
+  animation: fadeIn 0.5s ease;
+}
+
+#feedback-text {
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+#next-btn {
+  background: var(--dark);
+  color: white;
+  border: none;
+  padding: 14px 30px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
