@@ -40,13 +40,15 @@
   </style>
 </head>
 
-<body class="bg-slate-100 min-h-screen flex flex-col items-center">
-  <div class="flex-grow flex items-start justify-center w-full px-4 pt-10 pb-20">
+<body class="bg-slate-100 min-h-screen flex flex-col">
+
+  <main class="flex-grow flex flex-col items-center justify-start px-4 pt-10 pb-12 overflow-y-auto main-content">
+
     <div id="main-container"
-      class="bg-white p-6 pb-12 m-4 shadow-lg rounded-lg max-w-md w-full border border-gray-200 flex flex-col transition-all">
+      class="bg-white p-6 pb-12 shadow-lg rounded-lg max-w-md w-full border border-gray-200 flex flex-col transition-all animate-in mb-8">
 
       <div class="flex justify-between items-center mb-6">
-        <h1 class="text-xl font-bold text-slate-800">FL Real Estate Exam</h1>
+        <h1 class="text-xl font-bold text-slate-800 tracking-tight">FL Real Estate</h1>
         <div class="text-right">
           <div id="score" class="text-sm font-bold text-blue-600">Score: 0/0</div>
           <div id="timer" class="text-xs font-mono text-slate-500">00:00</div>
@@ -58,13 +60,13 @@
       </div>
 
       <div id="quiz-box" class="flex flex-col">
-        <div id="card-content" class="animate-in">
+        <div id="card-content">
           <span id="category-tag" class="text-xs font-semibold tracking-widest text-slate-400 uppercase">Category</span>
           <h2 id="question-text" class="text-lg font-semibold text-slate-700 mt-2 mb-6 leading-snug">
             Loading Exam Data...
           </h2>
 
-          <div id="options-container" class="space-y-3 pb-10">
+          <div id="options-container" class="space-y-3 pb-4">
           </div>
         </div>
 
@@ -77,26 +79,23 @@
         </div>
       </div>
     </div>
-  </div>
+  </main>
 
-  <footer class="bg-gray-800 text-white py-4 px-3 mt-16 w-full">
+  <footer class="bg-gray-800 text-white py-6 px-3 w-full mt-auto">
     <div class="container mx-auto flex flex-wrap items-center justify-between">
-      <div class="w-full md:w-1/2 md:text-center md:mb-0 mb-8">
+      <div class="w-full md:w-1/2 text-center md:text-left mb-4 md:mb-0">
         <p class="text-xs text-gray-400 md:text-sm">Copyright 2026 &copy; All Rights Reserved</p>
       </div>
-      <div class="w-full md:w-1/2 md:text-center md:mb-0 mb-8 flex flex-col items-center">
-
-        <div class="flex items-center justify-center gap-6 text-xl">
-          <a href="https://www.facebook.com/codelikeagirl91" class="text-gray-400 hover:text-white transition-colors">
-            <i class="fab fa-facebook-f"></i>
-          </a>
-          <a href="http://linkedin.com/in/lindsey-howard" class="text-gray-400 hover:text-white transition-colors">
-            <i class="fab fa-linkedin-in"></i>
-          </a>
-          <a href="https://github.com/codelikeagirl29" class="text-gray-400 hover:text-white transition-colors">
-            <i class="fab fa-github"></i>
-          </a>
-        </div>
+      <div class="w-full md:w-1/2 flex justify-center md:justify-end gap-6 text-xl">
+        <a href="https://www.facebook.com/codelikeagirl91" class="text-gray-400 hover:text-white transition-colors">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="http://linkedin.com/in/lindsey-howard" class="text-gray-400 hover:text-white transition-colors">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+        <a href="https://github.com/codelikeagirl29" class="text-gray-400 hover:text-white transition-colors">
+          <i class="fab fa-github"></i>
+        </a>
       </div>
     </div>
   </footer>
