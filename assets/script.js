@@ -116,16 +116,61 @@ document.getElementById('next-btn').onclick = () => {
     clearInterval(timerInterval);
     document.getElementById('progress-bar').style.width = "100%";
 
-    // Results screen
+    // 1. Calculate percentage
+    const percentage = Math.round((score / shuffledQuestions.length) * 100);
+    const passingScore = 70; // Set your passing grade here
+    const passed = percentage >= passingScore;
+
+    // 2. Determine Pass/Fail styling and message
+    const statusText = passed ? "PASSED" : "FAILED";
+    const statusClass = passed ? "text-green-600" : "text-red-600";
+    const subMessage = passed 
+        ? "Congratulations! You're ready for the state exam." 
+        : "Don't give up! Review the material and try again.";
+
+    // 3. Trigger Confetti if passed
+    if (passed) {
+      const duration = 3 * 1000;
+      const end = Date.now() + duration;
+
+      (function frame() {
+        confetti({
+          particleCount: 3,
+          angle: 60,
+          spread: 55,
+          origin: { x: 0 },
+          colors: ['#22c55e', '#3b82f6', '#f59e0b']
+        });
+        confetti({
+          particleCount: 3,
+          angle: 120,
+          spread: 55,
+          origin: { x: 1 },
+          colors: ['#22c55e', '#3b82f6', '#f59e0b']
+        });
+
+        if (Date.now() < end) {
+          requestAnimationFrame(frame);
+        }
+      }());
+    }
+
+    // 4. Results screen display
     document.getElementById('quiz-box').innerHTML = `
-            <div class="text-center pb-10">
-                <h2 class="text-2xl font-bold mb-4 text-slate-800">Exam Finished!</h2>
-                <p class="text-lg font-semibold mb-2">Final Score: ${score}/${shuffledQuestions.length}</p>
-                <p class="mb-8 text-slate-500">Total Time: ${document.getElementById('timer').innerText}</p>
-                <button id="restart-btn" onclick="location.reload()" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg shadow-md transition-all">
-                    Restart Quiz
-                </button>
-            </div>`;
+        <div class="text-center pb-10 animate-in">
+            <h2 class="text-3xl font-black mb-2 ${statusClass}">${statusText}</h2>
+            <p class="text-lg font-bold text-slate-700 mb-1">${percentage}% Correct</p>
+            <p class="text-sm text-slate-500 mb-6">${subMessage}</p>
+            
+            <div class="bg-slate-50 rounded-lg p-4 mb-8 border border-slate-100">
+                <p class="text-sm font-semibold text-slate-600">Final Score: ${score}/${shuffledQuestions.length}</p>
+                <p class="text-xs text-slate-400">Total Time: ${document.getElementById('timer').innerText}</p>
+            </div>
+
+            <button id="restart-btn" onclick="location.reload()" class="w-full bg-slate-800 hover:bg-black text-white font-bold py-4 px-8 rounded-xl shadow-lg transition-all transform hover:scale-[1.02]">
+                Try Again
+            </button>
+        </div>`;
   }
 };
 
