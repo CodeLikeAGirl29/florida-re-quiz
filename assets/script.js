@@ -50,6 +50,7 @@ async function init() {
 }
 
 function showQuestion() {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
   const qData = shuffledQuestions[currentIdx];
   document.getElementById('category-tag').innerText = qData.cat;
   document.getElementById('question-text').innerText = qData.q;
