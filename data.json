@@ -592,5 +592,447 @@
       "Mineral rights"
     ],
     "correct": 0
-  }
+  },
+  {
+    "cat": "Agency",
+    "q": "Which relationship disclosure would a broker who has listed a property as a single agent, show a prospective buyer that wants to look at the property?",
+    "options": [
+      "A nonrepresentation disclosure (no brokerage relationship)",
+      "A single agent relationship disclosure",
+      "A consent to transition to transaction broker disclosure",
+      "A transaction broker disclosure"
+    ],
+    "correct": 0
+  },
+  {
+    "cat": "Brokerage Operations",
+    "q": "A sales associate has hired an unlicensed assistant. Which of the following duties can the unlicensed assistant NOT perform?",
+    "options": [
+      "Type contracts",
+      "Deposit escrow checks",
+      "Negotiate a listing agreement with a seller",
+      "Take phone calls"
+    ],
+    "correct": 2
+  },
+  {
+    "cat": "Brokerage Operations",
+    "q": "Which of the following statements is INCORRECT concerning a broker that has decided to hold escrow money?",
+    "options": [
+      "The broker cannot keep the escrow money in a stock brokerage firm",
+      "The broker cannot commingle his personal money with the escrow money",
+      "The broker cannot hold the money outside of Florida",
+      "The broker cannot keep the escrow money in an interest-bearing account"
+    ],
+    "correct": 3
+  },
+  {
+    "cat": "Brokerage Operations",
+    "q": "Which of the following is NOT true concerning kickbacks?",
+    "options": [
+      "Not all kickbacks are illegal",
+      "A real estate licensee may not be paid a fee for referring buyers to a title company",
+      "Kickbacks cannot violate RESPA",
+      "All kickbacks are illegal"
+    ],
+    "correct": 3
+  },
+  {
+    "cat": "License Law",
+    "q": "Which of the following is true concerning qualifications of applicants for real estate sales associates in Florida?",
+    "options": [
+      "Applicants must be 18 years old and a resident of Florida",
+      "Applicants must be of good character and a citizen of the US",
+      "Applicants must be at least 21 years of age",
+      "Applicants need not be a citizen or resident but must have a high school diploma and a social security number"
+    ],
+    "correct": 3
+  },
+  {
+    "cat": "License Law",
+    "q": "Salaried employees of an owner-developer in Tampa sell timeshare units. They receive a year-end bonus based on sales production. Are they required to be licensed?",
+    "options": [
+      "No, they work for an owner-developer",
+      "No, but they must hold a timeshare license",
+      "Yes, because part of the compensation is based on real estate sales production",
+      "Yes, because anyone working for a developer must be licensed"
+    ],
+    "correct": 2
+  },
+  {
+    "cat": "Mortgages",
+    "q": "Which mortgage clause, in a title theory state, provides that the conveyance of title to the lender is defeated when all terms are satisfied?",
+    "options": [
+      "Due-on-sale clause",
+      "Acceleration clause",
+      "Defeasance clause",
+      "Premises clause"
+    ],
+    "correct": 2
+  },
+  {
+    "cat": "Legal Descriptions",
+    "q": "If a person dies intestate without heirs, the principle of law applying to disposition of the real property is:",
+    "options": [
+      "Estoppel",
+      "Bargain and sale deed",
+      "Escheat",
+      "Descent"
+    ],
+    "correct": 2
+  },
+  {
+    "cat": "Contracts",
+    "q": "Essential elements of a real estate contract include all of the following, EXCEPT:",
+    "options": [
+      "In writing and signed",
+      "Offer and acceptance",
+      "Consideration",
+      "Recording"
+    ],
+    "correct": 3
+  },
+  {
+    "cat": "Contracts",
+    "q": "Which of the following contracts is NOT covered by the Statute of Frauds?",
+    "options": [
+      "Option contracts",
+      "Mortgages",
+      "16-month listing agreement",
+      "6-month lease agreement"
+    ],
+    "correct": 3
+  },
+  {
+    "cat": "Disclosures",
+    "q": "Which of the following is true regarding an 'as is' provision in a sale contract?",
+    "options": [
+      "It relieves the seller of liability for material defects",
+      "It relieves the licensee of liability for material defects",
+      "It does not relieve the seller or licensee of the duty to disclose known facts materially affecting value",
+      "The 'as is' provision is not used in Florida"
+    ],
+    "correct": 2
+  },
+  {
+    "cat": "Brokerage Operations",
+    "q": "In regard to commingling, which applies?",
+    "options": [
+      "Commingling personal and escrow funds is legal in Florida",
+      "Commingling is only permitted if the account is designated",
+      "Commingling occurs when a broker deposits earnest money in a personal account (violation)",
+      "Buyer and seller must agree to commingling"
+    ],
+    "correct": 2
+  },
+  {
+    "cat": "Brokerage Operations",
+    "q": "What is the first thing a broker is required to do when presented with an escrow dispute?",
+    "options": [
+      "Contact FREC within 15 business days in writing",
+      "Implement one of the four settlement procedures",
+      "Contact FREC within 30 business days in writing",
+      "Mediate the matter"
+    ],
+    "correct": 0
+  },
+  {
+    "cat": "Agency",
+    "q": "Which form must be signed or initialed by the principal?",
+    "options": [
+      "Consent to transition to transaction broker disclosure",
+      "Transaction broker disclosure",
+      "Single agent disclosure",
+      "No brokerage relationship disclosure"
+    ],
+    "correct": 0
+  },
+  {
+    "cat": "License Law",
+    "q": "A broker owns a firm and wants to open a second separate brokerage firm. What should he apply for?",
+    "options": [
+      "A group license",
+      "Multiple licenses",
+      "A reissue",
+      "A transfer"
+    ],
+    "correct": 1
+  },
+  {
+    "cat": "Mortgages",
+    "q": "Discount points are:",
+    "options": [
+      "Charges to lenders from the Federal Reserve",
+      "Up-front charges to lower mortgage interest rates",
+      "FHA mortgage insurance charges",
+      "A charge by a lender to increase the bank's interest yield"
+    ],
+    "correct": 3
+  },
+  {
+    "cat": "Contracts",
+    "q": "A seller counters a buyer's offer, and the buyer accepts. The broker gives written acceptance to the seller. This is a(n):",
+    "options": [
+      "Express contract",
+      "Parol contract",
+      "Oral contract",
+      "Novation"
+    ],
+    "correct": 0
+  },
+  {
+    "cat": "Contracts",
+    "q": "A listing agreement was signed Jan 10. On Feb 12, the broker discovers the seller filed for bankruptcy. Which applies?",
+    "options": [
+      "Enforceable",
+      "Enforceable if in writing",
+      "Terminated",
+      "Continues in effect"
+    ],
+    "correct": 2
+  },
+  {
+    "cat": "Real Estate Math",
+    "q": "Rent is $900/mo. Closing is May 6. Buyer owns the day of closing. What is the proration?",
+    "options": [
+      "Debit seller, Credit buyer $754.84",
+      "Debit buyer, Credit seller $754.84",
+      "Debit seller, Credit buyer $759.30",
+      "Debit buyer, Credit seller $759.30"
+    ],
+    "correct": 0
+  },
+  {
+    "cat": "Taxes",
+    "q": "Sale Price $107,650. New Mortgage $175,000. Assumed Mortgage $25,000. What is the Intangible Tax?",
+    "options": [
+      "$170.00",
+      "$250.00",
+      "$350.00",
+      "$420.00"
+    ],
+    "correct": 2
+  },
+  {
+    "cat": "Legal Descriptions",
+    "q": "A woman owned the NW 1/2 of a section. She sold the W 1/2 of that NW 1/2. How many acres does she own?",
+    "options": [
+      "160 acres",
+      "400 acres",
+      "225 acres",
+      "215 acres"
+    ],
+    "correct": 0
+  },
+  {
+    "cat": "Appraisal",
+    "q": "Subject: 3-bed/1-bath. Comp: 3-bed/2-bath sold for $126k. Extra bath value: $4k. Subject value?",
+    "options": [
+      "$130,000",
+      "$126,000",
+      "$122,000",
+      "$125,000"
+    ],
+    "correct": 2
+  },
+  {
+    "cat": "Appraisal",
+    "q": "NOI: $4,000. Cap Rate: 16%. Operating Expenses: $12,000. Property Value?",
+    "options": [
+      "$20,000",
+      "$25,000",
+      "$15,000",
+      "$45,000"
+    ],
+    "correct": 1
+  },
+  {
+    "cat": "Real Estate Math",
+    "q": "Paving cost $18.50/ft. City pays 20%. Lot is 115'x150'. Sabrina's assessment?",
+    "options": [
+      "$920",
+      "$875",
+      "$851",
+      "$900"
+    ],
+    "correct": 2
+  },
+  {
+    "cat": "Legal Descriptions",
+    "q": "Acres in: NW 1/2 of SW 1/2 of E 1/2 AND NW 1/4 of E 1/2 of Section 14?",
+    "options": [
+      "140 acres",
+      "145 acres",
+      "160 acres",
+      "170 acres"
+    ],
+    "correct": 0
+  },
+  {
+    "cat": "Legal Descriptions",
+    "q": "How many square feet are in 1/2 an acre?",
+    "options": [
+      "21,780",
+      "43,560",
+      "63,580",
+      "320"
+    ],
+    "correct": 0
+  },
+  {
+    "cat": "Real Estate Math",
+    "q": "Associate gets 60% of commission. Sale: $64,000. Commission: 7%. Associate's pay?",
+    "options": [
+      "$2,688",
+      "$4,500",
+      "$4,600",
+      "$2,985"
+    ],
+    "correct": 0
+  },
+  {
+    "cat": "Real Estate Math",
+    "q": "20 acres. 20 equal lots. 15% common areas. Lot size in sq ft?",
+    "options": [
+      "37,026",
+      "56,225",
+      "18,513",
+      "12,268"
+    ],
+    "correct": 0
+  },
+  {
+    "cat": "Real Estate Math",
+    "q": "Purchase Price: $460,000. Down Payment: $100,000. Loan to Value (LTV)?",
+    "options": [
+      "75%",
+      "78%",
+      "80%",
+      "70%"
+    ],
+    "correct": 1
+  },
+  {
+    "cat": "License Law",
+    "q": "Which statement concerning property management is INCORRECT?",
+    "options": [
+      "A property manager paid on a transactional basis must be licensed as an active broker.",
+      "Licensed sales associates cannot work independently as property managers.",
+      "A broker's license is not required if the property manager is paid a salary.",
+      "If a property manager is compensated by salary, he must hold an active broker's license."
+    ],
+    "correct": 3
+  },
+  {
+    "cat": "License Law",
+    "q": "Which statement is FALSE concerning the required 45-hour post-licensing course?",
+    "options": [
+      "After completion, the license automatically renews for 2 years without further action.",
+      "Failure to complete the course results in a 'null and void' status.",
+      "The licensee must visit the DBPR website to renew and pay a fee after completing the course.",
+      "To continue in real estate after failing to complete the course, one must retake the 63-hour course and state exam."
+    ],
+    "correct": 0
+  },
+  {
+    "cat": "License Law",
+    "q": "Which of the following statements is TRUE regarding Florida regulatory authority?",
+    "options": [
+      "Chapter 61J2 are the laws created by the FREC.",
+      "Chapter 6J12 are the laws created by the FREC.",
+      "Chapter 61J2 are the rules created, implemented, and enforced by the FREC.",
+      "Chapter 61J3 are the rules created by the FREC."
+    ],
+    "correct": 2
+  },
+  {
+    "cat": "License Law",
+    "q": "Which statement is FALSE concerning the 14-hour continuing education (CE) requirement?",
+    "options": [
+      "Failure to complete post-licensing education results in a null and void status.",
+      "Only actively licensed sales associates are required to complete the 14 hours of CE.",
+      "Both active and inactive licensees must complete the 14 hours of CE.",
+      "A licensee can remain in involuntary inactive status for up to 2 years."
+    ],
+    "correct": 1
+  },
+  {
+    "cat": "License Law",
+    "q": "Which of the following statements is TRUE regarding Florida licensing?",
+    "options": [
+      "The Florida Governor's signature is on the real estate license.",
+      "Salaried managers of condos renting for up to 1 year must be licensed.",
+      "Licensees working for owner-developers as salaried employees must be licensed.",
+      "It is a violation of law to pay an unlicensed person for the referral of real estate business."
+    ],
+    "correct": 3
+  },
+  {
+    "cat": "License Law",
+    "q": "Which statement is TRUE concerning the categories of real estate licenses?",
+    "options": [
+      "A sales associate performs real estate services independently of a broker.",
+      "There is no difference between a broker and a broker associate.",
+      "A sales associate performs services under the direction, control, or management of a broker or owner-developer.",
+      "A person must be a sales associate for 3 years before qualifying to be a broker."
+    ],
+    "correct": 2
+  },
+  [
+    {
+      "cat": "Legal Descriptions",
+      "q": "Concerning the government survey method, which statement is FALSE?",
+      "options": [
+        "The method breaks the state up into a grid.",
+        "The prime meridian goes through Tallahassee.",
+        "The POB (point of beginning) is used to start the legal description.",
+        "Townships contain 36 sections."
+      ],
+      "correct": 2
+    },
+    {
+      "cat": "Escrow",
+      "q": "What is the first thing a broker is required to do when presented with an escrow dispute?",
+      "options": [
+        "Contact FREC within 15 business days in writing.",
+        "Implement one of the four settlement procedures.",
+        "Contact FREC within 30 business days in writing.",
+        "Mediate the matter."
+      ],
+      "correct": 0
+    },
+    {
+      "cat": "Property Rights",
+      "q": "If a person dies intestate (without a will) and has no heirs, what principle governs the disposition of their property?",
+      "options": [
+        "Estoppel",
+        "Bargain and sale deed",
+        "Escheat",
+        "Descent"
+      ],
+      "correct": 2
+    },
+    {
+      "cat": "Math",
+      "q": "How many square feet are in 1/2 of an acre?",
+      "options": [
+        "21,780",
+        "43,560",
+        "63,580",
+        "320"
+      ],
+      "correct": 0
+    },
+    {
+      "cat": "Math",
+      "q": "An associate earns 60% of all commissions. If they sell a property for $64,000 with a 7% commission, how much is the associate paid?",
+      "options": [
+        "$2,688",
+        "$4,500",
+        "$4,600",
+        "$2,985"
+      ],
+      "correct": 0
+    }
+  ]
 ]
