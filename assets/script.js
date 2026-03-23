@@ -58,7 +58,7 @@ function showQuestion() {
 
   const container = document.getElementById('options-container');
   container.innerHTML = '';
-  container.className = "space-y-3 pb-10";
+  container.className = "space-y-2 pb-4";
 
   // Map options to keep track of the original index for correct/incorrect checking
   const optionsWithIndices = qData.options.map((opt, i) => ({ text: opt, originalIdx: i }));
@@ -66,8 +66,7 @@ function showQuestion() {
 
   optionsWithIndices.forEach((optObj) => {
     const btn = document.createElement('button');
-    btn.className = "w-full text-left p-4 rounded-xl border-2 border-slate-100 hover:border-blue-400 hover:bg-blue-50 transition-all duration-200 text-slate-600 font-medium flex justify-between items-center group";
-    btn.innerHTML = `<span>${optObj.text}</span> <i class="fa-solid fa-circle-check opacity-0 group-hover:opacity-20"></i>`;
+btn.className = "w-full text-left p-3 rounded-xl border-2 border-slate-100 hover:border-blue-400 hover:bg-blue-50 transition-all duration-200 text-slate-600 font-medium flex justify-between items-center group text-sm";    btn.innerHTML = `<span>${optObj.text}</span> <i class="fa-solid fa-circle-check opacity-0 group-hover:opacity-20"></i>`;
     btn.onclick = () => checkAnswer(optObj.originalIdx, btn);
     container.appendChild(btn);
   });
