@@ -24,31 +24,6 @@ function startTimer() {
   }, 1000);
 }
 
-/**
- * UPDATED: Now an async function to fetch your data.json
- */
-async function init() {
-  try {
-    const response = await fetch('data.json');
-    if (!response.ok) throw new Error("Failed to load questions");
-
-    // Load the JSON data into our global questions array
-    questions = await response.json();
-
-    // Now proceed with your original initialization logic
-    shuffledQuestions = shuffleArray([...questions]);
-    currentIdx = 0;
-    score = 0;
-
-    document.getElementById('score').innerText = `Score: 0/${shuffledQuestions.length}`;
-    startTimer();
-    showQuestion();
-  } catch (error) {
-    console.error("Error:", error);
-    document.getElementById('question-text').innerText = "⚠️ Error loading data.json. Make sure you are using a Live Server.";
-  }
-}
-
 function showQuestion() {
   window.scrollTo({ top: 0, behavior: 'smooth' });
   const qData = shuffledQuestions[currentIdx];
@@ -66,7 +41,7 @@ function showQuestion() {
 
   optionsWithIndices.forEach((optObj) => {
     const btn = document.createElement('button');
-btn.className = "w-full text-left p-3 rounded-xl border-2 border-slate-100 hover:border-blue-400 hover:bg-blue-50 transition-all duration-200 text-slate-600 font-medium flex justify-between items-center group text-sm";    btn.innerHTML = `<span>${optObj.text}</span> <i class="fa-solid fa-circle-check opacity-0 group-hover:opacity-20"></i>`;
+    btn.className = "w-full text-left p-3 rounded-xl border-2 border-slate-100 hover:border-blue-400 hover:bg-blue-50 transition-all duration-200 text-slate-600 font-medium flex justify-between items-center group text-sm"; btn.innerHTML = `<span>${optObj.text}</span> <i class="fa-solid fa-circle-check opacity-0 group-hover:opacity-20"></i>`;
     btn.onclick = () => checkAnswer(optObj.originalIdx, btn);
     container.appendChild(btn);
   });
@@ -124,9 +99,9 @@ document.getElementById('next-btn').onclick = () => {
     // 2. Determine Pass/Fail styling and message
     const statusText = passed ? "PASSED" : "FAILED";
     const statusClass = passed ? "text-green-600" : "text-red-600";
-    const subMessage = passed 
-        ? "Congratulations! You're ready for the state exam." 
-        : "Don't give up! Review the material and try again.";
+    const subMessage = passed
+      ? "Congratulations! You're ready for the state exam."
+      : "Don't give up! Review the material and try again.";
 
     // 3. Trigger Confetti if passed
     if (passed) {
@@ -175,4 +150,46 @@ document.getElementById('next-btn').onclick = () => {
 };
 
 // Start the app
-init();
+
+async function startQuiz() {
+  const welcome = document.getElementById('welcome-screen');
+  const main = document.getElementById('main-container');
+
+  // 1. Play exit animation
+  welcome.classList.add('animate-out');
+
+  // 2. Wait for animation to finish, then swap
+  setTimeout(async () => {
+    welcome.classList.add('hidden');
+    main.classList.remove('hidden');
+    main.classList.add('animate-in');
+
+    // 3. Run your existing init logic
+    await init();
+  }, 300);
+}
+
+// Attach to the button
+document.getElementById('start-quiz-btn').onclick = startQuiz;
+
+// Update your init() function to remove the duplicate hidden/remove lines
+async function init() {
+  try {
+    const response = await fetch('data.json');
+    if (!response.ok) throw new Error("Failed to load questions");
+    // Load the JSON data into our global questions array
+    questions = await response.json();
+
+    // Now proceed with your original initialization logic
+    shuffledQuestions = shuffleArray([...questions]);
+    currentIdx = 0;
+    score = 0;
+
+    document.getElementById('score').innerText = `Score: 0/${shuffledQuestions.length}`;
+    startTimer();
+    showQuestion();
+  } catch (error) {
+    console.error("Error:", error);
+    document.getElementById('question-text').innerText = "⚠️ Error loading data.json. Make sure you are using a Live Server.";
+  }
+}

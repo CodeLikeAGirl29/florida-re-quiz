@@ -37,16 +37,62 @@
     .animate-in {
       animation: fadeIn 0.4s ease forwards;
     }
+
+    @keyframes fadeOut {
+      from {
+        opacity: 1;
+        transform: scale(1);
+      }
+
+      to {
+        opacity: 0;
+        transform: scale(0.95);
+      }
+    }
+
+    .animate-out {
+      animation: fadeOut 0.3s ease forwards;
+    }
   </style>
 </head>
 
-<body class="bg-slate-100 min-h-screen flex flex-col">
+<body class="bg-slate-100 min-h-screen flex flex-col items-center">
 
-  <main class="flex-grow flex flex-col items-center justify-start px-4 pt-4 pb-2 overflow-y-auto main-content">
+  <main class="flex-grow flex flex-col items-center justify-center px-4 w-full max-w-md">
+
+    <div id="welcome-screen"
+      class="bg-white p-8 shadow-xl rounded-2xl w-full border border-gray-200 text-center animate-in">
+      <div class="mb-6">
+        <div class="w-20 h-20 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+          <i class="fa-solid fa-house-chimney text-3xl"></i>
+        </div>
+        <h1 class="text-2xl font-black text-slate-800 mb-2">Florida Real Estate Master Drill</h1>
+        <p class="text-slate-500 text-sm leading-relaxed">
+          Prepare for your state exam with our comprehensive practice drill. This quiz covers Florida statutes,
+          principles, and real estate math.
+        </p>
+      </div>
+
+      <div class="space-y-4 mb-8 text-left bg-slate-50 p-4 rounded-xl border border-slate-100">
+        <div class="flex items-center gap-3 text-xs font-semibold text-slate-600">
+          <i class="fa-solid fa-check text-green-500"></i> Instant Feedback
+        </div>
+        <div class="flex items-center gap-3 text-xs font-semibold text-slate-600">
+          <i class="fa-solid fa-clock text-blue-500"></i> Tracked Time
+        </div>
+        <div class="flex items-center gap-3 text-xs font-semibold text-slate-600">
+          <i class="fa-solid fa-graduation-cap text-purple-500"></i> Passing Score: 70%
+        </div>
+      </div>
+
+      <button id="start-quiz-btn"
+        class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-8 rounded-xl shadow-lg transition-all transform hover:scale-[1.02]">
+        Take Quiz <i class="fa-solid fa-play ml-2 text-xs"></i>
+      </button>
+    </div>
 
     <div id="main-container"
-      class="bg-white p-3 pb-4 shadow-lg rounded-lg max-w-md w-full border border-gray-200 flex flex-col transition-all animate-in mb-4">
-
+      class="hidden bg-white p-4 shadow-lg rounded-lg w-full border border-gray-200 flex flex-col transition-all mb-4">
       <div class="flex justify-between items-center mb-3">
         <h1 class="text-xl font-bold text-slate-800 tracking-tight">FL Real Estate</h1>
         <div class="text-right">
@@ -62,16 +108,12 @@
       <div id="quiz-box" class="flex flex-col">
         <div id="card-content">
           <span id="category-tag" class="text-xs font-semibold tracking-widest text-slate-400 uppercase">Category</span>
-          <h2 id="question-text" class="text-lg font-semibold text-slate-700 mt-1 mb-3 leading-snug">
-            Loading Exam Data...
-          </h2>
-
-          <div id="options-container" class="space-y-2 pb-2">
-          </div>
+          <h2 id="question-text" class="text-lg font-semibold text-slate-700 mt-1 mb-3 leading-snug">Loading...</h2>
+          <div id="options-container" class="space-y-2 pb-2"></div>
         </div>
 
-<div id="feedback-area" class="hidden mt-4 pt-4 border-t border-gray-100 text-center animate-in">
-  <p id="feedback-text" class="text-sm font-bold mb-4"></p>
+        <div id="feedback-area" class="hidden mt-4 pt-4 border-t border-gray-100 text-center animate-in">
+          <p id="feedback-text" class="text-sm font-bold mb-4"></p>
           <button id="next-btn"
             class="w-full bg-slate-800 hover:bg-slate-900 text-white font-bold py-3 px-6 rounded-lg transition-colors flex items-center justify-center gap-2">
             Next Question <i class="fa-solid fa-arrow-right text-xs"></i>
