@@ -978,61 +978,59 @@
     ],
     "correct": 2
   },
-  [
-    {
-      "cat": "Legal Descriptions",
-      "q": "Concerning the government survey method, which statement is FALSE?",
-      "options": [
-        "The method breaks the state up into a grid.",
-        "The prime meridian goes through Tallahassee.",
-        "The POB (point of beginning) is used to start the legal description.",
-        "Townships contain 36 sections."
-      ],
-      "correct": 2
-    },
-    {
-      "cat": "Escrow",
-      "q": "What is the first thing a broker is required to do when presented with an escrow dispute?",
-      "options": [
-        "Contact FREC within 15 business days in writing.",
-        "Implement one of the four settlement procedures.",
-        "Contact FREC within 30 business days in writing.",
-        "Mediate the matter."
-      ],
-      "correct": 0
-    },
-    {
-      "cat": "Property Rights",
-      "q": "If a person dies intestate (without a will) and has no heirs, what principle governs the disposition of their property?",
-      "options": [
-        "Estoppel",
-        "Bargain and sale deed",
-        "Escheat",
-        "Descent"
-      ],
-      "correct": 2
-    },
-    {
-      "cat": "Math",
-      "q": "How many square feet are in 1/2 of an acre?",
-      "options": [
-        "21,780",
-        "43,560",
-        "63,580",
-        "320"
-      ],
-      "correct": 0
-    },
-    {
-      "cat": "Math",
-      "q": "An associate earns 60% of all commissions. If they sell a property for $64,000 with a 7% commission, how much is the associate paid?",
-      "options": [
-        "$2,688",
-        "$4,500",
-        "$4,600",
-        "$2,985"
-      ],
-      "correct": 0
-    }
-  ]
+  {
+    "cat": "Legal Descriptions",
+    "q": "Concerning the government survey method, which statement is FALSE?",
+    "options": [
+      "The method breaks the state up into a grid.",
+      "The prime meridian goes through Tallahassee.",
+      "The POB (point of beginning) is used to start the legal description.",
+      "Townships contain 36 sections."
+    ],
+    "correct": 2
+  },
+  {
+    "cat": "Escrow",
+    "q": "What is the first thing a broker is required to do when presented with an escrow dispute?",
+    "options": [
+      "Contact FREC within 15 business days in writing.",
+      "Implement one of the four settlement procedures.",
+      "Contact FREC within 30 business days in writing.",
+      "Mediate the matter."
+    ],
+    "correct": 0
+  },
+  {
+    "cat": "Property Rights",
+    "q": "If a person dies intestate (without a will) and has no heirs, what principle governs the disposition of their property?",
+    "options": [
+      "Estoppel",
+      "Bargain and sale deed",
+      "Escheat",
+      "Descent"
+    ],
+    "correct": 2
+  },
+  {
+    "cat": "Math",
+    "q": "How many square feet are in 1/2 of an acre?",
+    "options": [
+      "21,780",
+      "43,560",
+      "63,580",
+      "320"
+    ],
+    "correct": 0
+  },
+  {
+    "cat": "Math",
+    "q": "An associate earns 60% of all commissions. If they sell a property for $64,000 with a 7% commission, how much is the associate paid?",
+    "options": [
+      "$2,688",
+      "$4,500",
+      "$4,600",
+      "$2,985"
+    ],
+    "correct": 0
+  }
 ]
