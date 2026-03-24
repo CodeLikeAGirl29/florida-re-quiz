@@ -397,7 +397,7 @@
   },
   {
     "cat": "Math",
-    "q": "A 175-acre tract has 25% reserved for streets. Lot size is 7,500 sq ft. How many lots are available?",
+    "q": "A developer owns 175 acres and sets aside 25% for streets. If each lot is 7,500 sq ft, how many lots are available for development?",
     "options": [
       "254",
       "762",
@@ -408,7 +408,7 @@
   },
   {
     "cat": "Math",
-    "q": "If a lot is 250' x 300' and paving costs $20/ft (City pays 40%), what is the owner's assessment?",
+    "q": "A property is 250' x 300'. The cost of paving is $20 per foot, with the city contributing 40%. What amount will the owner be assessed?",
     "options": [
       "$1,500",
       "$1,200",
@@ -452,7 +452,7 @@
   },
   {
     "cat": "Math",
-    "q": "A 75-acre tract requires 10,000 sq ft per lot. 20% is reserved for streets/sidewalks. How many lots are available?",
+    "q": "A developer has 75 acres of land. If 20% is set aside for streets and sidewalks and each lot must be 10,000 sq ft, how many lots are available?",
     "options": [
       "632 lots",
       "261 lots",
@@ -485,7 +485,7 @@
   },
   {
     "cat": "Math",
-    "q": "A lot is 80' x 125'. Paving costs $30/ft. The city pays 15%. What is the homeowner's special assessment?",
+    "q": "A property is 80' x 125'. The cost to pave is $30 per foot, with the city contributing 15%. What is the homeowner's share of the special assessment?",
     "options": [
       "$2,040",
       "$1,020",
@@ -892,7 +892,7 @@
   },
   {
     "cat": "Real Estate Math",
-    "q": "20 acres. 20 equal lots. 15% common areas. Lot size in sq ft?",
+    "q": "A developer has 20 acres of land and plans to divide it into 20 equal lots. If 15% of the land is reserved for common areas, what is the square footage of each lot?",
     "options": [
       "37,026",
       "56,225",
