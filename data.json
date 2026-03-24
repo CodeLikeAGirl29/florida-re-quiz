@@ -287,7 +287,7 @@
   },
   {
     "cat": "License Law",
-    "q": "Sales associate Linda has 26 months of experience. Which of the following is INCORRECT regarding her options?",
+    "q": "Sales associate Sloane has 26 months of experience. Which of the following is INCORRECT regarding her options?",
     "options": [
       "She can become a broker associate and later open her own office",
       "She can become a general partner in her current brokerage firm",
@@ -837,7 +837,7 @@
   },
   {
     "cat": "Appraisal",
-    "q": "NOI: $4,000. Cap Rate: 16%. Operating Expenses: $12,000. Property Value?",
+    "q": "An investment property produces an Effective Gross Income of $16,000. The annual Operating Expenses for the property, including property taxes and maintenance, total $12,000. If a local appraiser determines that the appropriate Capitalization Rate for this type of building is 16%, what is the estimated Market Value of the property?",
     "options": [
       "$20,000",
       "$25,000",
@@ -847,8 +847,8 @@
     "correct": 1
   },
   {
-    "cat": "Real Estate Math",
-    "q": "Paving cost $18.50/ft. City pays 20%. Lot is 115'x150'. Sabrina's assessment?",
+    "cat": "Math",
+    "q": "Paving cost $18.50/ft. City pays 20%. Lot is 115'x150'. What is Alex's special assessment?",
     "options": [
       "$920",
       "$875",
