@@ -6,6 +6,27 @@
   --glass: rgba(255, 255, 255, 0.95);
 }
 
+body::-webkit-scrollbar {
+  width: var(--sb-size)
+}
+
+body::-webkit-scrollbar-track {
+  background: var(--sb-track-color);
+  border-radius: 1px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: var(--sb-thumb-color);
+  border-radius: 1px;
+
+}
+
+@supports not selector(::-webkit-scrollbar) {
+  body {
+    scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
+  }
+}
+
 body {
   margin: 0;
   min-height: 100vh;
@@ -15,6 +36,9 @@ body {
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   font-family: 'Inter', sans-serif;
   overflow-x: hidden;
+  --sb-track-color: #232E33;
+  --sb-thumb-color: #3498db;
+  --sb-size: 12px;
 }
 
 /* Add a wrapper for the quiz area to handle the spacing */
