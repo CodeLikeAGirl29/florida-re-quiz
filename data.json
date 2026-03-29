@@ -8,7 +8,8 @@
       "Bank theory",
       "Loan theory"
     ],
-    "correct": 1
+    "correct": 1,
+    "explanation": "Correct answer: Title theory. This is the best match for the Legal Theory concept tested in this question."
   },
   {
     "cat": "Legal Theory",
@@ -19,7 +20,8 @@
       "Life estate",
       "Estate for years"
     ],
-    "correct": 3
+    "correct": 3,
+    "explanation": "Correct answer: Estate for years. This is the best match for the Legal Theory concept tested in this question."
   },
   {
     "cat": "Titles",
@@ -30,7 +32,8 @@
       "An opinion of title is executed by an attorney",
       "It helps determine if a title is marketable"
     ],
-    "correct": 1
+    "correct": 1,
+    "explanation": "Correct answer: It is a complete successive record of ownership (Chain of Title). This is the best match for the Titles concept tested in this question."
   },
   {
     "cat": "Legal",
@@ -41,7 +44,8 @@
       "Actual notice",
       "Habendum clause"
     ],
-    "correct": 0
+    "correct": 0,
+    "explanation": "Correct answer: Seisin. This is the best match for the Legal concept tested in this question."
   },
   {
     "cat": "Legal Descriptions",
@@ -52,7 +56,8 @@
       "Metes and bounds uses a POB and compass degrees",
       "The principal meridian runs north/south through Tallahassee"
     ],
-    "correct": 0
+    "correct": 0,
+    "explanation": "Correct answer: Every section in a township contains 43,560 square feet. This is the best match for the Legal Descriptions concept tested in this question."
   },
   {
     "cat": "Legal Theory",
@@ -63,7 +68,8 @@
       "In Title Theory states, the borrower does not retain ownership",
       "In Lien Theory states, the borrower does retain ownership"
     ],
-    "correct": 0
+    "correct": 0,
+    "explanation": "Correct answer: In Lien Theory states, the borrower does not retain ownership. This is the best match for the Legal Theory concept tested in this question."
   },
   {
     "cat": "Legal",
@@ -74,7 +80,8 @@
       "The HOA disclosure law is F.S. 720",
       "The DBPR laws are F.S. 120"
     ],
-    "correct": 3
+    "correct": 3,
+    "explanation": "Correct answer: The DBPR laws are F.S. 120. This is the best match for the Legal concept tested in this question."
   },
   {
     "cat": "Statute of Frauds",
@@ -85,7 +92,8 @@
       "It does not apply to a 3-month listing",
       "It applies to option contracts"
     ],
-    "correct": 1
+    "correct": 1,
+    "explanation": "Correct answer: All contracts must be in writing to be enforceable. This is the best match for the Statute of Frauds concept tested in this question."
   },
   {
     "cat": "Disclosures",
@@ -96,7 +104,8 @@
       "Nothing, if it is an 'As-Is' contract",
       "Nothing, if he is a Transaction Broker"
     ],
-    "correct": 0
+    "correct": 0,
+    "explanation": "Correct answer: The roof leaks. This is the best match for the Disclosures concept tested in this question."
   },
   {
     "cat": "Disclosures",
@@ -107,7 +116,8 @@
       "Disclosure is not required if it is an 'As-Is' contract",
       "The broker has an ethical but not a legal obligation to disclose"
     ],
-    "correct": 1
+    "correct": 1,
+    "explanation": "Correct answer: The broker is always required to disclose it to all buyers. This is the best match for the Disclosures concept tested in this question."
   },
   {
     "cat": "Agency",
@@ -118,7 +128,8 @@
       "Cancel the buyer agreement",
       "Pay an extra commission fee"
     ],
-    "correct": 1
+    "correct": 1,
+    "explanation": "Correct answer: Transition to a Transaction Broker relationship. This is the best match for the Agency concept tested in this question."
   },
   {
     "cat": "Agency",
@@ -129,7 +140,8 @@
       "A Single Agent can represent both parties with consent",
       "Transaction Brokers have a fiduciary duty"
     ],
-    "correct": 1
+    "correct": 1,
+    "explanation": "Correct answer: No Brokerage disclosure must be given before showing property. This is the best match for the Agency concept tested in this question."
   },
   {
     "cat": "Homestead",
@@ -140,7 +152,8 @@
       "Homestead is protected from forced sale for nonpayment of property taxes",
       "Homes over $75k get $50k exemption from city/county and $25k from schools"
     ],
-    "correct": 2
+    "correct": 2,
+    "explanation": "Correct answer: Homestead is protected from forced sale for nonpayment of property taxes. This is the best match for the Homestead concept tested in this question."
   },
   {
     "cat": "Property Management",
@@ -151,7 +164,8 @@
       "If a claim is made, the landlord has 15 days to notify the tenant",
       "Banks used to hold deposits must be located in Florida"
     ],
-    "correct": 2
+    "correct": 2,
+    "explanation": "Correct answer: If a claim is made, the landlord has 15 days to notify the tenant. This is the best match for the Property Management concept tested in this question."
   },
   {
     "cat": "Contracts",
@@ -162,7 +176,8 @@
       "A contract where only one party is bound to perform",
       "A legal remedy for breach of contract"
     ],
-    "correct": 1
+    "correct": 1,
+    "explanation": "Correct answer: Agreement to substitute a new party for an original one. This is the best match for the Contracts concept tested in this question."
   },
   {
     "cat": "Fair Housing",
@@ -173,7 +188,8 @@
       "Redlining is a discriminatory lending practice",
       "Steering is when sellers are encouraged to list properties"
     ],
-    "correct": 3
+    "correct": 3,
+    "explanation": "Correct answer: Steering is when sellers are encouraged to list properties. This is the best match for the Fair Housing concept tested in this question."
   },
   {
     "cat": "Antitrust",
@@ -184,7 +200,8 @@
       "Anti Trust Laws",
       "The Fair Housing Act"
     ],
-    "correct": 2
+    "correct": 2,
+    "explanation": "Correct answer: Anti Trust Laws. This is the best match for the Antitrust concept tested in this question."
   },
   {
     "cat": "Federal Law",
@@ -195,7 +212,8 @@
       "The buyer must acknowledge receiving the lead-based paint disclosure",
       "The buyer is not required to inspect the property for lead"
     ],
-    "correct": 1
+    "correct": 1,
+    "explanation": "Correct answer: The sales associate is legally responsible for the disclosure and pamphlet. This is the best match for the Federal Law concept tested in this question."
   },
   {
     "cat": "Licensing",
@@ -206,7 +224,8 @@
       "Null and Void",
       "Suspended"
     ],
-    "correct": 2
+    "correct": 2,
+    "explanation": "Correct answer: Null and Void. This is the best match for the Licensing concept tested in this question."
   },
   {
     "cat": "Licensing",
@@ -217,7 +236,8 @@
       "Both active and inactive licensees",
       "Only brokers"
     ],
-    "correct": 2
+    "correct": 2,
+    "explanation": "Correct answer: Both active and inactive licensees. This is the best match for the Licensing concept tested in this question."
   },
   {
     "cat": "Brokerage Office",
@@ -228,7 +248,8 @@
       "Larceny",
       "Commingling"
     ],
-    "correct": 2
+    "correct": 2,
+    "explanation": "Correct answer: Larceny. This is the best match for the Brokerage Office concept tested in this question."
   },
   {
     "cat": "License Law",
@@ -239,7 +260,8 @@
       "Only active associates must complete the 45-hr post-license course",
       "Failure to do 14-hr CE results in involuntary inactive status"
     ],
-    "correct": 2
+    "correct": 2,
+    "explanation": "Correct answer: Only active associates must complete the 45-hr post-license course. This is the best match for the License Law concept tested in this question."
   },
   {
     "cat": "License Law",
@@ -250,7 +272,8 @@
       "Express her thanks to the sales associate",
       "Give the associate a bottle of wine"
     ],
-    "correct": 2
+    "correct": 2,
+    "explanation": "Correct answer: Express her thanks to the sales associate. This is the best match for the License Law concept tested in this question."
   },
   {
     "cat": "License Law",
@@ -261,7 +284,8 @@
       "The associate's employer (Broker or Owner-Developer)",
       "The DBPR"
     ],
-    "correct": 2
+    "correct": 2,
+    "explanation": "Correct answer: The associate's employer (Broker or Owner-Developer). This is the best match for the License Law concept tested in this question."
   },
   {
     "cat": "Brokerage Operations",
@@ -272,7 +296,8 @@
       "Brokers are limited to one principal office only",
       "Branch offices do not require registration"
     ],
-    "correct": 1
+    "correct": 1,
+    "explanation": "Correct answer: He must register the new location and pay a fee. This is the best match for the Brokerage Operations concept tested in this question."
   },
   {
     "cat": "Brokerage Operations",
@@ -283,7 +308,8 @@
       "On a separate 'About Us' page only",
       "Only the licensee's name is required for internet ads"
     ],
-    "correct": 0
+    "correct": 0,
+    "explanation": "Correct answer: Adjacent to or immediately above/below the point of contact info. This is the best match for the Brokerage Operations concept tested in this question."
   },
   {
     "cat": "License Law",
@@ -294,7 +320,8 @@
       "She can quit and go to work for a different brokerage",
       "She can buy stock in her current brokerage firm"
     ],
-    "correct": 1
+    "correct": 1,
+    "explanation": "Correct answer: She can become a general partner in her current brokerage firm. This is the best match for the License Law concept tested in this question."
   },
   {
     "cat": "License Law",
@@ -305,7 +332,8 @@
       "3rd degree felony",
       "Administrative fine only"
     ],
-    "correct": 2
+    "correct": 2,
+    "explanation": "Correct answer: 3rd degree felony. This is the best match for the License Law concept tested in this question."
   },
   {
     "cat": "License Law",
@@ -316,7 +344,8 @@
       "Sue the Broker in a civil court",
       "File a claim with the Real Estate Recovery Fund"
     ],
-    "correct": 2
+    "correct": 2,
+    "explanation": "Correct answer: Sue the Broker in a civil court. This is the best match for the License Law concept tested in this question."
   },
   {
     "cat": "Finance",
@@ -327,7 +356,8 @@
       "5.75%",
       "6.0%"
     ],
-    "correct": 1
+    "correct": 1,
+    "explanation": "Correct answer: 5.5%. This is the best match for the Finance concept tested in this question."
   },
   {
     "cat": "Finance",
@@ -338,7 +368,8 @@
       "Taxes",
       "Insurance"
     ],
-    "correct": 1
+    "correct": 1,
+    "explanation": "Correct answer: Principal. This is the best match for the Finance concept tested in this question."
   },
   {
     "cat": "Closing",
@@ -349,7 +380,8 @@
       "Unpaid property taxes are a debit to seller/credit to buyer",
       "The binder deposit is a credit to the buyer"
     ],
-    "correct": 0
+    "correct": 0,
+    "explanation": "Correct answer: Binder deposit is a credit to buyer and debit to seller. This is the best match for the Closing concept tested in this question."
   },
   {
     "cat": "Finance",
@@ -360,7 +392,8 @@
       "3.25%",
       "4.5%"
     ],
-    "correct": 0
+    "correct": 0,
+    "explanation": "Correct answer: 4.75%. This is the best match for the Finance concept tested in this question."
   },
   {
     "cat": "Finance",
@@ -371,7 +404,8 @@
       "Fannie Mae is a major contributor in the secondary market",
       "The secondary market provides liquidity to the primary market"
     ],
-    "correct": 1
+    "correct": 1,
+    "explanation": "Correct answer: The secondary market originates new loans for borrowers. This is the best match for the Finance concept tested in this question."
   },
   {
     "cat": "Finance",
@@ -382,7 +416,8 @@
       "A veteran's widow is eligible for VA benefits if she does not remarry",
       "FHA loans require a VA funding fee"
     ],
-    "correct": 2
+    "correct": 2,
+    "explanation": "Correct answer: A veteran's widow is eligible for VA benefits if she does not remarry. This is the best match for the Finance concept tested in this question."
   },
   {
     "cat": "Math",
@@ -393,7 +428,8 @@
       "Sales price / 100 (round up) * .35",
       "Total mortgages * .0020"
     ],
-    "correct": 0
+    "correct": 0,
+    "explanation": "Correct answer: Sales price / 100 (round up) * .70. This is the best match for the Math concept tested in this question."
   },
   {
     "cat": "Math",
@@ -404,7 +440,8 @@
       "813",
       "1,106"
     ],
-    "correct": 1
+    "correct": 1,
+    "explanation": "Correct answer: 762. This is the best match for the Math concept tested in this question."
   },
   {
     "cat": "Math",
@@ -415,7 +452,8 @@
       "$3,000",
       "$5,000"
     ],
-    "correct": 0
+    "correct": 0,
+    "explanation": "Correct answer: $1,500. This is the best match for the Math concept tested in this question."
   },
   {
     "cat": "Math",
@@ -426,7 +464,8 @@
       "7.5%",
       "8%"
     ],
-    "correct": 1
+    "correct": 1,
+    "explanation": "Correct answer: 7%. This is the best match for the Math concept tested in this question."
   },
   {
     "cat": "Math",
@@ -437,7 +476,8 @@
       "30 acres",
       "80 acres"
     ],
-    "correct": 2
+    "correct": 2,
+    "explanation": "Correct answer: 30 acres. This is the best match for the Math concept tested in this question."
   },
   {
     "cat": "Math",
@@ -448,7 +488,8 @@
       "7%",
       "8%"
     ],
-    "correct": 1
+    "correct": 1,
+    "explanation": "Correct answer: 6%. This is the best match for the Math concept tested in this question."
   },
   {
     "cat": "Math",
@@ -459,7 +500,8 @@
       "450 lots",
       "285 lots"
     ],
-    "correct": 1
+    "correct": 1,
+    "explanation": "Correct answer: 261 lots. This is the best match for the Math concept tested in this question."
   },
   {
     "cat": "Math",
@@ -470,7 +512,8 @@
       "420 bins",
       "270 bins"
     ],
-    "correct": 2
+    "correct": 2,
+    "explanation": "Correct answer: 420 bins. This is the best match for the Math concept tested in this question."
   },
   {
     "cat": "Math",
@@ -481,7 +524,8 @@
       "8%",
       "5%"
     ],
-    "correct": 3
+    "correct": 3,
+    "explanation": "Correct answer: 5%. This is the best match for the Math concept tested in this question."
   },
   {
     "cat": "Math",
@@ -492,7 +536,8 @@
       "$2,800",
       "$2,000"
     ],
-    "correct": 1
+    "correct": 1,
+    "explanation": "Correct answer: $1,020. This is the best match for the Math concept tested in this question."
   },
   {
     "cat": "Math",
@@ -503,7 +548,8 @@
       "$257.67 debit seller, credit buyer",
       "$257.67 debit buyer, credit seller"
     ],
-    "correct": 0
+    "correct": 0,
+    "explanation": "Correct answer: $231.90 debit seller, credit buyer. This is the best match for the Math concept tested in this question."
   },
   {
     "cat": "Math",
@@ -514,7 +560,8 @@
       "3 3/4%",
       "3 1/8%"
     ],
-    "correct": 2
+    "correct": 2,
+    "explanation": "Correct answer: 3 3/4%. This is the best match for the Math concept tested in this question."
   },
   {
     "cat": "Math",
@@ -525,7 +572,8 @@
       "$1,110",
       "$2,200"
     ],
-    "correct": 3
+    "correct": 3,
+    "explanation": "Correct answer: $2,200. This is the best match for the Math concept tested in this question."
   },
   {
     "cat": "Math",
@@ -536,7 +584,8 @@
       "120 acres and 5,227,200 sq ft",
       "125 acres and 7,000,000 sq ft"
     ],
-    "correct": 1
+    "correct": 1,
+    "explanation": "Correct answer: 165 acres and 7,187,400 sq ft. This is the best match for the Math concept tested in this question."
   },
   {
     "cat": "Math",
@@ -547,7 +596,8 @@
       "178 acres",
       "165 acres"
     ],
-    "correct": 0
+    "correct": 0,
+    "explanation": "Correct answer: 160 acres. This is the best match for the Math concept tested in this question."
   },
   {
     "cat": "Math",
@@ -558,7 +608,8 @@
       "75 acres",
       "40 acres"
     ],
-    "correct": 1
+    "correct": 1,
+    "explanation": "Correct answer: 10 acres. This is the best match for the Math concept tested in this question."
   },
   {
     "cat": "Appraisal",
@@ -569,7 +620,8 @@
       "Subtract $3,000 from the subject",
       "Add $3,000 to the subject"
     ],
-    "correct": 1
+    "correct": 1,
+    "explanation": "Correct answer: Subtract $3,000 from the comparable. This is the best match for the Appraisal concept tested in this question."
   },
   {
     "cat": "Appraisal",
@@ -580,7 +632,8 @@
       "USPAP stands for 'Protected' Appraisal Practice",
       "They can perform it if it's not a federally related transaction"
     ],
-    "correct": 3
+    "correct": 3,
+    "explanation": "Correct answer: They can perform it if it's not a federally related transaction. This is the best match for the Appraisal concept tested in this question."
   },
   {
     "cat": "Property Rights",
@@ -591,7 +644,8 @@
       "Subsurface rights",
       "Mineral rights"
     ],
-    "correct": 0
+    "correct": 0,
+    "explanation": "Correct answer: Riparian rights. This is the best match for the Property Rights concept tested in this question."
   },
   {
     "cat": "Agency",
@@ -602,7 +656,8 @@
       "A consent to transition to transaction broker disclosure",
       "A transaction broker disclosure"
     ],
-    "correct": 0
+    "correct": 0,
+    "explanation": "Correct answer: A nonrepresentation disclosure (no brokerage relationship). This is the best match for the Agency concept tested in this question."
   },
   {
     "cat": "Brokerage Operations",
@@ -613,7 +668,8 @@
       "Negotiate a listing agreement with a seller",
       "Take phone calls"
     ],
-    "correct": 2
+    "correct": 2,
+    "explanation": "Correct answer: Negotiate a listing agreement with a seller. This is the best match for the Brokerage Operations concept tested in this question."
   },
   {
     "cat": "Brokerage Operations",
@@ -624,7 +680,8 @@
       "The broker cannot hold the money outside of Florida",
       "The broker cannot keep the escrow money in an interest-bearing account"
     ],
-    "correct": 3
+    "correct": 3,
+    "explanation": "Correct answer: The broker cannot keep the escrow money in an interest-bearing account. This is the best match for the Brokerage Operations concept tested in this question."
   },
   {
     "cat": "Brokerage Operations",
@@ -635,7 +692,8 @@
       "Kickbacks cannot violate RESPA",
       "All kickbacks are illegal"
     ],
-    "correct": 3
+    "correct": 3,
+    "explanation": "Correct answer: All kickbacks are illegal. This is the best match for the Brokerage Operations concept tested in this question."
   },
   {
     "cat": "License Law",
@@ -646,7 +704,8 @@
       "Applicants must be at least 21 years of age",
       "Applicants need not be a citizen or resident but must have a high school diploma and a social security number"
     ],
-    "correct": 3
+    "correct": 3,
+    "explanation": "Correct answer: Applicants need not be a citizen or resident but must have a high school diploma and a social security number. This is the best match for the License Law concept tested in this question."
   },
   {
     "cat": "License Law",
@@ -657,7 +716,8 @@
       "Yes, because part of the compensation is based on real estate sales production",
       "Yes, because anyone working for a developer must be licensed"
     ],
-    "correct": 2
+    "correct": 2,
+    "explanation": "Correct answer: Yes, because part of the compensation is based on real estate sales production. This is the best match for the License Law concept tested in this question."
   },
   {
     "cat": "Mortgages",
@@ -668,7 +728,8 @@
       "Defeasance clause",
       "Premises clause"
     ],
-    "correct": 2
+    "correct": 2,
+    "explanation": "Correct answer: Defeasance clause. This is the best match for the Mortgages concept tested in this question."
   },
   {
     "cat": "Legal Descriptions",
@@ -679,7 +740,8 @@
       "Escheat",
       "Descent"
     ],
-    "correct": 2
+    "correct": 2,
+    "explanation": "Correct answer: Escheat. This is the best match for the Legal Descriptions concept tested in this question."
   },
   {
     "cat": "Contracts",
@@ -690,7 +752,8 @@
       "Consideration",
       "Recording"
     ],
-    "correct": 3
+    "correct": 3,
+    "explanation": "Correct answer: Recording. This is the best match for the Contracts concept tested in this question."
   },
   {
     "cat": "Contracts",
@@ -701,7 +764,8 @@
       "16-month listing agreement",
       "6-month lease agreement"
     ],
-    "correct": 3
+    "correct": 3,
+    "explanation": "Correct answer: 6-month lease agreement. This is the best match for the Contracts concept tested in this question."
   },
   {
     "cat": "Disclosures",
@@ -712,7 +776,8 @@
       "It does not relieve the seller or licensee of the duty to disclose known facts materially affecting value",
       "The 'as is' provision is not used in Florida"
     ],
-    "correct": 2
+    "correct": 2,
+    "explanation": "Correct answer: It does not relieve the seller or licensee of the duty to disclose known facts materially affecting value. This is the best match for the Disclosures concept tested in this question."
   },
   {
     "cat": "Brokerage Operations",
@@ -723,7 +788,8 @@
       "Commingling occurs when a broker deposits earnest money in a personal account (violation)",
       "Buyer and seller must agree to commingling"
     ],
-    "correct": 2
+    "correct": 2,
+    "explanation": "Correct answer: Commingling occurs when a broker deposits earnest money in a personal account (violation). This is the best match for the Brokerage Operations concept tested in this question."
   },
   {
     "cat": "Brokerage Operations",
@@ -734,7 +800,8 @@
       "Contact FREC within 30 business days in writing",
       "Mediate the matter"
     ],
-    "correct": 0
+    "correct": 0,
+    "explanation": "Correct answer: Contact FREC within 15 business days in writing. This is the best match for the Brokerage Operations concept tested in this question."
   },
   {
     "cat": "Agency",
@@ -745,7 +812,8 @@
       "Single agent disclosure",
       "No brokerage relationship disclosure"
     ],
-    "correct": 0
+    "correct": 0,
+    "explanation": "Correct answer: Consent to transition to transaction broker disclosure. This is the best match for the Agency concept tested in this question."
   },
   {
     "cat": "License Law",
@@ -756,7 +824,8 @@
       "A reissue",
       "A transfer"
     ],
-    "correct": 1
+    "correct": 1,
+    "explanation": "Correct answer: Multiple licenses. This is the best match for the License Law concept tested in this question."
   },
   {
     "cat": "Mortgages",
@@ -767,7 +836,8 @@
       "FHA mortgage insurance charges",
       "A charge by a lender to increase the bank's interest yield"
     ],
-    "correct": 3
+    "correct": 3,
+    "explanation": "Correct answer: A charge by a lender to increase the bank's interest yield. This is the best match for the Mortgages concept tested in this question."
   },
   {
     "cat": "Contracts",
@@ -778,7 +848,8 @@
       "Oral contract",
       "Novation"
     ],
-    "correct": 0
+    "correct": 0,
+    "explanation": "Correct answer: Express contract. This is the best match for the Contracts concept tested in this question."
   },
   {
     "cat": "Contracts",
@@ -789,7 +860,8 @@
       "Terminated",
       "Continues in effect"
     ],
-    "correct": 2
+    "correct": 2,
+    "explanation": "Correct answer: Terminated. This is the best match for the Contracts concept tested in this question."
   },
   {
     "cat": "Real Estate Math",
@@ -800,7 +872,8 @@
       "Debit seller, Credit buyer $759.30",
       "Debit buyer, Credit seller $759.30"
     ],
-    "correct": 0
+    "correct": 0,
+    "explanation": "Correct answer: Debit seller, Credit buyer $754.84. This is the best match for the Real Estate Math concept tested in this question."
   },
   {
     "cat": "Taxes",
@@ -811,7 +884,8 @@
       "$350.00",
       "$420.00"
     ],
-    "correct": 2
+    "correct": 2,
+    "explanation": "Correct answer: $350.00. This is the best match for the Taxes concept tested in this question."
   },
   {
     "cat": "Legal Descriptions",
@@ -822,7 +896,8 @@
       "225 acres",
       "215 acres"
     ],
-    "correct": 0
+    "correct": 0,
+    "explanation": "Correct answer: 160 acres. This is the best match for the Legal Descriptions concept tested in this question."
   },
   {
     "cat": "Appraisal",
@@ -833,7 +908,8 @@
       "$122,000",
       "$125,000"
     ],
-    "correct": 2
+    "correct": 2,
+    "explanation": "Correct answer: $122,000. This is the best match for the Appraisal concept tested in this question."
   },
   {
     "cat": "Appraisal",
@@ -844,7 +920,8 @@
       "$15,000",
       "$45,000"
     ],
-    "correct": 1
+    "correct": 1,
+    "explanation": "Correct answer: $25,000. This is the best match for the Appraisal concept tested in this question."
   },
   {
     "cat": "Math",
@@ -855,7 +932,8 @@
       "$851",
       "$900"
     ],
-    "correct": 2
+    "correct": 2,
+    "explanation": "Correct answer: $851. This is the best match for the Math concept tested in this question."
   },
   {
     "cat": "Legal Descriptions",
@@ -866,7 +944,8 @@
       "160 acres",
       "170 acres"
     ],
-    "correct": 0
+    "correct": 0,
+    "explanation": "Correct answer: 140 acres. This is the best match for the Legal Descriptions concept tested in this question."
   },
   {
     "cat": "Legal Descriptions",
@@ -877,7 +956,8 @@
       "63,580",
       "320"
     ],
-    "correct": 0
+    "correct": 0,
+    "explanation": "Correct answer: 21,780. This is the best match for the Legal Descriptions concept tested in this question."
   },
   {
     "cat": "Real Estate Math",
@@ -888,7 +968,8 @@
       "$4,600",
       "$2,985"
     ],
-    "correct": 0
+    "correct": 0,
+    "explanation": "Correct answer: $2,688. This is the best match for the Real Estate Math concept tested in this question."
   },
   {
     "cat": "Real Estate Math",
@@ -899,7 +980,8 @@
       "18,513",
       "12,268"
     ],
-    "correct": 0
+    "correct": 0,
+    "explanation": "Correct answer: 37,026. This is the best match for the Real Estate Math concept tested in this question."
   },
   {
     "cat": "Real Estate Math",
@@ -910,7 +992,8 @@
       "80%",
       "70%"
     ],
-    "correct": 1
+    "correct": 1,
+    "explanation": "Correct answer: 78%. This is the best match for the Real Estate Math concept tested in this question."
   },
   {
     "cat": "License Law",
@@ -921,7 +1004,8 @@
       "A broker's license is not required if the property manager is paid a salary.",
       "If a property manager is compensated by salary, he must hold an active broker's license."
     ],
-    "correct": 3
+    "correct": 3,
+    "explanation": "Correct answer: If a property manager is compensated by salary, he must hold an active broker's license.. This is the best match for the License Law concept tested in this question."
   },
   {
     "cat": "License Law",
@@ -932,7 +1016,8 @@
       "The licensee must visit the DBPR website to renew and pay a fee after completing the course.",
       "To continue in real estate after failing to complete the course, one must retake the 63-hour course and state exam."
     ],
-    "correct": 0
+    "correct": 0,
+    "explanation": "Correct answer: After completion, the license automatically renews for 2 years without further action.. This is the best match for the License Law concept tested in this question."
   },
   {
     "cat": "License Law",
@@ -943,7 +1028,8 @@
       "Chapter 61J2 are the rules created, implemented, and enforced by the FREC.",
       "Chapter 61J3 are the rules created by the FREC."
     ],
-    "correct": 2
+    "correct": 2,
+    "explanation": "Correct answer: Chapter 61J2 are the rules created, implemented, and enforced by the FREC.. This is the best match for the License Law concept tested in this question."
   },
   {
     "cat": "License Law",
@@ -954,7 +1040,8 @@
       "Both active and inactive licensees must complete the 14 hours of CE.",
       "A licensee can remain in involuntary inactive status for up to 2 years."
     ],
-    "correct": 1
+    "correct": 1,
+    "explanation": "Correct answer: Only actively licensed sales associates are required to complete the 14 hours of CE.. This is the best match for the License Law concept tested in this question."
   },
   {
     "cat": "License Law",
@@ -965,7 +1052,8 @@
       "Licensees working for owner-developers as salaried employees must be licensed.",
       "It is a violation of law to pay an unlicensed person for the referral of real estate business."
     ],
-    "correct": 3
+    "correct": 3,
+    "explanation": "Correct answer: It is a violation of law to pay an unlicensed person for the referral of real estate business.. This is the best match for the License Law concept tested in this question."
   },
   {
     "cat": "License Law",
@@ -976,7 +1064,8 @@
       "A sales associate performs services under the direction, control, or management of a broker or owner-developer.",
       "A person must be a sales associate for 3 years before qualifying to be a broker."
     ],
-    "correct": 2
+    "correct": 2,
+    "explanation": "Correct answer: A sales associate performs services under the direction, control, or management of a broker or owner-developer.. This is the best match for the License Law concept tested in this question."
   },
   {
     "cat": "Legal Descriptions",
@@ -987,7 +1076,8 @@
       "The POB (point of beginning) is used to start the legal description.",
       "Townships contain 36 sections."
     ],
-    "correct": 2
+    "correct": 2,
+    "explanation": "Correct answer: The POB (point of beginning) is used to start the legal description.. This is the best match for the Legal Descriptions concept tested in this question."
   },
   {
     "cat": "Escrow",
@@ -998,7 +1088,8 @@
       "Contact FREC within 30 business days in writing.",
       "Mediate the matter."
     ],
-    "correct": 0
+    "correct": 0,
+    "explanation": "Correct answer: Contact FREC within 15 business days in writing.. This is the best match for the Escrow concept tested in this question."
   },
   {
     "cat": "Property Rights",
@@ -1009,7 +1100,8 @@
       "Escheat",
       "Descent"
     ],
-    "correct": 2
+    "correct": 2,
+    "explanation": "Correct answer: Escheat. This is the best match for the Property Rights concept tested in this question."
   },
   {
     "cat": "Math",
@@ -1020,7 +1112,8 @@
       "63,580",
       "320"
     ],
-    "correct": 0
+    "correct": 0,
+    "explanation": "Correct answer: 21,780. This is the best match for the Math concept tested in this question."
   },
   {
     "cat": "Math",
@@ -1031,6 +1124,7 @@
       "$4,600",
       "$2,985"
     ],
-    "correct": 0
+    "correct": 0,
+    "explanation": "Correct answer: $2,688. This is the best match for the Math concept tested in this question."
   }
 ]
