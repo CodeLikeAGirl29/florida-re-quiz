@@ -2,7 +2,7 @@
 
 A high-performance, interactive study tool designed to help students master the Florida Real Estate State Exam. This application focuses on high-retention learning through instant feedback, category-specific drills, and built-in mathematical formula support.
 
-![screenshot])https://res.cloudinary.com/dhw9dl4gm/image/upload/v1774970319/Florida-Real-Estate-Master-Drill-03-31-2026_10_17_AM_pdqcs8.png)
+![screenshot](https://res.cloudinary.com/dhw9dl4gm/image/upload/v1774970319/Florida-Real-Estate-Master-Drill-03-31-2026_10_17_AM_pdqcs8.png)
 
 ## ✨ Key Features
 
