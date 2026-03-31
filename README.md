@@ -1,102 +1,59 @@
 # 🏠 Florida Real Estate Master Drill
 
-A high-performance, responsive web application designed to help students master the Florida Real Estate Sales Associate Exam. Built with **Vanilla JavaScript**, **Tailwind CSS**, and an **Asynchronous JSON data structure**.
+A high-performance, interactive study tool designed to help students master the Florida Real Estate State Exam. This application focuses on high-retention learning through instant feedback, category-specific drills, and built-in mathematical formula support.
 
-![License](https://img.shields.io/badge/License-MIT-blue.svg)
-![Version](https://img.shields.io/badge/Version-1.0.0-green.svg)
+![screenshot])https://res.cloudinary.com/dhw9dl4gm/image/upload/v1774970319/Florida-Real-Estate-Master-Drill-03-31-2026_10_17_AM_pdqcs8.png)
 
----
+## ✨ Key Features
 
-## 🚀 Features
+  * **Persistent Progress:** Built-in session recovery. Refresh your browser or come back later, and you'll pick up exactly where you left off (score, time, and question index).
+  * **Targeted Study Modes:** Filter questions by specific Florida exam categories like *Real Estate Math*, *Agency Relationships*, or *Title Theory*.
+  * **Formula "Cheat Sheet":** A dedicated, non-intrusive modal providing instant access to critical Florida formulas (Doc Stamps, Intangible Tax, Acreage, etc.).
+  * **Intelligent Feedback:** Explanations are color-coded and styled for quick scanning:
+      * \<strong style="color: \#2563eb;"\>Key Points\</strong\> for theory retention.
+      * \<strong style="color: \#9333ea;"\>Calculations\</strong\> for step-by-step math breakdowns.
+  * **Modern UX/UI:** \* **Cool Starburst Pattern:** A custom-blended indigo SVG background for a "tech-forward" aesthetic.
+      * **Keyboard Support:** Use keys `1-4` to select answers and `Enter` to proceed.
+      * **Glassmorphism:** A translucent, blurred card design for high readability.
 
-* **Real-Time Exam Logic:** Shuffled questions and randomized answer choices to prevent "positional memorization."
-* **Live Scoring & Timer:** Tracks performance and pace, mimicking the high-pressure environment of the Pearson VUE state exam.
-* **Dynamic Category Tags:** Questions are tagged by topic (Math, Law, Agency, etc.) for targeted feedback.
-* **Modern UI:** Clean, distraction-free interface built with Tailwind CSS and Font Awesome icons.
-* **Scalable Data:** Questions are decoupled from the code in a dedicated `data.json` file for easy expansion.
+## 🚀 Tech Stack
 
----
+  * **Frontend:** HTML5, Tailwind CSS (Utility-first styling)
+  * **Logic:** Vanilla JavaScript (ES6+)
+  * **Data:** JSON-based question bank
+  * **Effects:** Canvas-Confetti for successful exam completion
 
 ## 🛠️ Installation & Setup
 
-Because this project uses the **JavaScript Fetch API** to load the question bank, you cannot run it by simply opening the `index.html` file in your browser. You must use a local server.
+1.  **Clone the repository:**
+    ```bash
+    git clone https://github.com/codelikeagirl29/florida-re-quiz.git
+    ```
+2.  **Navigate to the folder:**
+    ```bash
+    cd florida-re-quiz
+    ```
+3.  **Run the app:**
+    Simply open `index.html` in any modern web browser. No local server or build step is required\!
 
-### 1. Prerequisites
-* [VS Code](https://code.visualstudio.com/)
-* **Live Server Extension** (by Ritwick Dey) installed in VS Code.
+## 📂 Project Structure
 
-### 2. Running the App
-1.  Clone or download this repository to your local machine.
-2.  Open the folder in VS Code.
-3.  Right-click on `index.html` in the file explorer.
-4.  Select **"Open with Live Server"**.
-5.  The app will launch at `http://127.0.0.1:5500`.
+  * `index.html` - The main application shell and UI components.
+  * `data.json` - The core question database including math scenarios and legal theory.
+  * `assets/script.js` - Handles the quiz engine, timer, and LocalStorage persistence.
+  * `assets/style.css` - Custom CSS for the star pattern background and scrollbar aesthetics.
 
----
+## 📈 Roadmap
 
-## 📊 Project Structure
+  * [ ] **Mock Exam Mode:** A timed 100-question simulation.
+  * [ ] **Visual Questions:** Support for plat maps and legal description diagrams.
+  * [ ] **Mastery Analytics:** Enhanced tracking to show which categories need the most work.
 
-```text
-├── assets/
-│   ├── script.js      # Core quiz logic & timer
-│   └── style.css       # Custom animations and overrides
-├── data.json           # The "Question Bank" (50+ Real Estate questions)
-├── index.html          # Main application structure
-└── README.md           # Project documentation
-```
+## 🤝 Contributing
 
----
+Contributions are welcome\! If you have additional Florida-specific questions or features to suggest, please feel free to open an issue or submit a pull request.
 
-## 📝 How to Add Questions
+-----
 
-To expand the exam bank, simply open `data.json` and add a new object to the array following this format:
-
-```json
-{
-  "cat": "Category Name",
-  "q": "Your question text here?",
-  "options": ["Option A", "Option B", "Option C", "Option D"],
-  "correct": 0
-}
-```
-*Note: The `correct` value is the **index** of the right answer (0 for the first option, 1 for the second, etc.).*
-
----
-
-## 💡 Exam Tips Included
-The question bank covers critical Florida-specific topics:
-* **The 0-1-3 Rule** (Escrow Deposits)
-* **S-I-N Taxes** (Documentary Stamps & Intangible Tax)
-* **Save Our Homes** (Homestead Assessment Caps)
-* **F.S. 475** (Real Estate License Law)
-
----
-
-## 📄 License
-This project is open-source and available under the MIT License.
-```
-
----
-
-### 🖥️ New Question for `data.json`
-Let's add one final "Law" question regarding **Brokerage Signage**—it's an easy point on the exam if you know the requirements:
-
-```json
-  {
-    "cat": "Brokerage Operations",
-    "q": "Which of the following MUST be included on a broker's entrance sign?",
-    "options": [
-      "The names of all sales associates",
-      "The phone number of the brokerage",
-      "The name of the brokerage and the name of at least one broker",
-      "The broker's home address"
-    ],
-    "correct": 2
-  }
-```
-
-### 💡 Exam Tip: Signage Requirements
-Every brokerage must have an entrance sign that is easily visible. It must contain:
-1.  The **Trade Name** (if used).
-2.  The **Broker's Name**.
-3.  The words "**Licensed Real Estate Broker**" or "Lic. Real Estate Broker."
+**Author:** [Lindsey Howard](http://linkedin.com/in/lindsey-howard)  
+**License:** © 2026 RE Master Drill - All Rights Reserved

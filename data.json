@@ -429,7 +429,7 @@
       "Total mortgages * .0020"
     ],
     "correct": 0,
-    "explanation": "Calculation: Take the Sales Price, divide by 100, round up to the nearest whole number, and multiply by $0.70. Note: In Miami-Dade, the rate is $0.60, but the state exam uses $0.70."
+    "explanation": "<strong class='text-purple-600 font-bold'>Calculation:</strong> (Sales Price / 100) * $0.70. <br><br><strong class='text-blue-600'>Key Point:</strong> Always round the Sales Price UP to the nearest 100 before dividing. While Miami-Dade uses $0.60, the state exam assumes the $0.70 rate for all other Florida counties."
   },
   {
     "cat": "Math",
@@ -441,7 +441,7 @@
       "1,106"
     ],
     "correct": 1,
-    "explanation": "Calculation: 1. Total usable acres: 175 * 0.75 = 131.25 acres. 2. Convert to sq ft: 131.25 * 43,560 = 5,717,250 sq ft. 3. Divide by lot size: 5,717,250 / 7,500 = 762.3. Round down to 762 lots."
+    "explanation": "<strong class='text-purple-600 font-bold'>Calculation:</strong> <br>1. Usable Percent: 100% - 25% = 75% (0.75). <br>2. Usable Acres: 175 * 0.75 = 131.25 acres. <br>3. Total Sq Ft: 131.25 * 43,560 = 5,717,250 sq ft. <br>4. Total Lots: 5,717,250 / 7,500 = 762.3. <br><br><strong class='text-blue-600'>Key Point:</strong> Always round DOWN for lots, as you cannot sell a partial lot."
   },
   {
     "cat": "Math",
@@ -453,7 +453,7 @@
       "$5,000"
     ],
     "correct": 0,
-    "explanation": "Calculation: 1. Total cost: 250 front feet * $20 = $5,000. 2. Homeowner's share: 100% - 40% (city) = 60%. $5,000 * 0.60 = $3,000. 3. Divide by 2 (the neighbor across the street pays half): $3,000 / 2 = $1,500."
+    "explanation": "<strong class='text-purple-600 font-bold'>Calculation:</strong> <br>1. Total Paving Cost: 250 front feet * $20 = $5,000. <br>2. Total Owners' Share: $5,000 * 0.60 (100% - 40% city share) = $3,000. <br>3. Individual Assessment: $3,000 / 2 = $1,500. <br><br><strong class='text-blue-600'>Key Point:</strong> You must divide by 2 because the cost is split between the owners on both sides of the street."
   },
   {
     "cat": "Math",
@@ -465,7 +465,7 @@
       "8%"
     ],
     "correct": 1,
-    "explanation": "Calculation: 1. Total commission: $22,050 / 0.70 = $31,500. 2. Rate: $31,500 / $450,000 = 0.07 (7%)."
+    "explanation": "<strong class='text-purple-600 font-bold'>Calculation:</strong> <br>1. Total Gross Commission: $22,050 / 0.70 = $31,500. <br>2. Commission Rate: $31,500 / $450,000 = 0.07 or 7%."
   },
   {
     "cat": "Math",
@@ -477,7 +477,7 @@
       "80 acres"
     ],
     "correct": 2,
-    "explanation": "Calculation: Part A: 640 / 2 / 4 / 4 = 20 acres. Part B: 640 / 2 / 2 / 4 / 4 = 10 acres. 20 + 10 = 30 total acres. Note: 'AND' means you add the two parcels together."
+    "explanation": "<strong class='text-purple-600 font-bold'>Calculation:</strong> <br>Parcel A: 640 / 2 / 4 / 4 = 20 acres. <br>Parcel B: 640 / 2 / 2 / 4 / 4 = 10 acres. <br>Total: 20 + 10 = 30 acres. <br><br><strong class='text-blue-600'>Key Point:</strong> In legal descriptions, the word 'AND' indicates you must calculate two separate parcels and add them together."
   },
   {
     "cat": "Math",
@@ -489,7 +489,7 @@
       "8%"
     ],
     "correct": 1,
-    "explanation": "Calculation: 1. Total commission: $22,365 / 0.75 = $29,820. 2. Rate: $29,820 / $497,000 = 0.06 (6%)."
+    "explanation": "<strong class='text-purple-600 font-bold'>Calculation:</strong> <br>1. Total Commission: $22,365 / 0.75 = $29,820. <br>2. Rate: $29,820 / $497,000 = 0.06 or 6%."
   },
   {
     "cat": "Math",
@@ -501,7 +501,7 @@
       "285 lots"
     ],
     "correct": 1,
-    "explanation": "Calculation: 1. Usable acres: 75 * 0.80 = 60 acres. 2. Sq Ft: 60 * 43,560 = 2,613,600 sq ft. 3. Lots: 2,613,600 / 10,000 = 261.36. Round down to 261."
+    "explanation": "<strong class='text-purple-600 font-bold'>Calculation:</strong> <br>1. Usable Land: 75 acres * 0.80 = 60 acres. <br>2. Sq Ft: 60 * 43,560 = 2,613,600 sq ft. <br>3. Lots: 2,613,600 / 10,000 = 261.36. <br><br><strong class='text-blue-600'>Key Point:</strong> Always round down to 261 available lots."
   },
   {
     "cat": "Math",
@@ -513,7 +513,7 @@
       "270 bins"
     ],
     "correct": 2,
-    "explanation": "Calculation: 1. Area per floor: 100 * 50 = 5,000 sq ft. 2. Usable per floor: 5,000 * 0.70 = 3,500 sq ft. 3. Total usable: 3,500 * 3 floors = 10,500 sq ft. 4. Bins: 10,500 / 25 (area of 5x5 bin) = 420 bins."
+    "explanation": "<strong class='text-purple-600 font-bold'>Calculation:</strong> <br>1. Total Area: 100 * 50 * 3 floors = 15,000 sq ft. <br>2. Usable Area: 15,000 * 0.70 = 10,500 sq ft. <br>3. Bin Size: 5 * 5 = 25 sq ft per bin. <br>4. Total Bins: 10,500 / 25 = 420 bins."
   },
   {
     "cat": "Math",
@@ -525,7 +525,7 @@
       "5%"
     ],
     "correct": 3,
-    "explanation": "Calculation: 1. Total commission: $29,750 / 0.70 = $42,500. 2. Rate: $42,500 / $850,000 = 0.05 (5%)."
+    "explanation": "<strong class='text-purple-600 font-bold'>Calculation:</strong> <br>1. Total Commission: $29,750 / 0.70 = $42,500. <br>2. Rate: $42,500 / $850,000 = 0.05 or 5%."
   },
   {
     "cat": "Math",
@@ -537,11 +537,11 @@
       "$2,000"
     ],
     "correct": 1,
-    "explanation": "Calculation: 1. Total cost: 80 front feet * $30 = $2,400. 2. Homeowners' share: 100% - 15% = 85%. $2,400 * 0.85 = $2,040. 3. Assessment per owner: $2,040 / 2 = $1,020."
+    "explanation": "<strong class='text-purple-600 font-bold'>Calculation:</strong> <br>1. Total Cost: 80 front feet * $30 = $2,400. <br>2. Total Owners' Share: $2,400 * 0.85 (100% - 15%) = $2,040. <br>3. Owner's Assessment: $2,040 / 2 = $1,020."
   },
   {
     "cat": "Math",
-    "q": "Closing is Jan 10. Buyer assumes $209k loan at 4.5%. Closing day belongs to buyer. What is the proration?",
+    "q": "A real estate closing is set for January 10th. The buyer is assuming the seller's existing mortgage balance of $209,000 at an interest rate of 4.5%. If the day of closing belongs to the buyer, what is the required interest proration?",
     "options": [
       "$231.90 debit seller, credit buyer",
       "$231.90 debit buyer, credit seller",
@@ -549,7 +549,7 @@
       "$257.67 debit buyer, credit seller"
     ],
     "correct": 0,
-    "explanation": "Calculation: 1. Annual interest: $209,000 * 0.045 = $9,405. 2. Daily interest: $9,405 / 365 = $25.767. 3. Seller's days: 9 (since buyer owns closing day). 4. Proration: $25.767 * 9 = $231.90. Note: Interest is paid in arrears, so the seller owes for the days they used the loan."
+    "explanation": "<strong class='text-purple-600 font-bold'>Calculation:</strong> <br>1. Annual Interest: $209,000 * 0.045 = $9,405. <br>2. Daily Interest: $9,405 / 365 = $25.7671. <br>3. Seller Days: 9 days (Jan 1 through Jan 9). <br>4. Proration: $25.7671 * 9 = $231.90. <br><br><strong class='text-blue-600'>Key Point:</strong> Interest on an assumed loan is paid in arrears and is a Debit to the Seller and Credit to the Buyer."
   },
   {
     "cat": "Math",
@@ -561,7 +561,7 @@
       "3 1/8%"
     ],
     "correct": 2,
-    "explanation": "Calculation: 6 points = 6/8 percent (which is 0.75%). 3% + 0.75% = 3.75% or 3 3/4%."
+    "explanation": "<strong class='text-purple-600 font-bold'>Calculation:</strong> <br>1. Point Value: 6 points * 1/8% = 6/8% or 0.75%. <br>2. Total Yield: 3% + 0.75% = 3.75%. <br><br><strong class='text-blue-600'>Key Point:</strong> Each discount point increases the lender's yield by 1/8%."
   },
   {
     "cat": "Math",
@@ -573,7 +573,7 @@
       "$2,200"
     ],
     "correct": 3,
-    "explanation": "Calculation: 1. Annual salary: $286,000 / 2.5 = $114,400. 2. Weekly pay: $114,400 / 52 = $2,200."
+    "explanation": "<strong class='text-purple-600 font-bold'>Calculation:</strong> <br>1. Annual Salary: $286,000 / 2.5 = $114,400. <br>2. Weekly Pay: $114,400 / 52 weeks = $2,200."
   },
   {
     "cat": "Math",
@@ -585,7 +585,7 @@
       "125 acres and 7,000,000 sq ft"
     ],
     "correct": 1,
-    "explanation": "Calculation: Part A: 640 / 4 / 4 / 4 / 2 = 5 acres. Part B: 640 / 2 / 2 = 160 acres. Total = 165 acres. 165 * 43,560 = 7,187,400 sq ft."
+    "explanation": "<strong class='text-purple-600 font-bold'>Calculation:</strong> <br>Parcel A: 640 / 4 / 4 / 4 / 2 = 5 acres. <br>Parcel B: 640 / 2 / 2 = 160 acres. <br>Total: 165 acres. <br>Sq Ft: 165 * 43,560 = 7,187,400 sq ft."
   },
   {
     "cat": "Math",
@@ -597,7 +597,7 @@
       "165 acres"
     ],
     "correct": 0,
-    "explanation": "Calculation: 640 / 2 / 2 = 160 acres. Key Point: Working backwards, the South 1/2 is 320 acres, and the North 1/2 of that is 160 acres."
+    "explanation": "<strong class='text-purple-600 font-bold'>Calculation:</strong> 640 / 2 / 2 = 160 acres. <br><br><strong class='text-blue-600'>Key Point:</strong> A section contains 640 acres. Working backward: the South 1/2 is 320, and the North 1/2 of that is 160."
   },
   {
     "cat": "Math",
@@ -609,7 +609,7 @@
       "40 acres"
     ],
     "correct": 1,
-    "explanation": "Calculation: 1. Total sq ft: 20 * 21,780 = 435,600 sq ft. 2. Acres: 435,600 / 43,560 = 10 acres."
+    "explanation": "<strong class='text-purple-600 font-bold'>Calculation:</strong> <br>1. Total Sq Ft: 20 lots * 21,780 = 435,600 sq ft. <br>2. Total Acres: 435,600 / 43,560 = 10 acres. <br><br><strong class='text-blue-600'>Key Point:</strong> One acre equals 43,560 square feet."
   },
   {
     "cat": "Appraisal",

@@ -16,14 +16,15 @@ function shuffleArray(array) {
   return array;
 }
 
-function startTimer() {
+function startTimer(resumeSeconds = 0) {
   clearInterval(timerInterval);
-  seconds = 0;
+  seconds = resumeSeconds;
   timerInterval = setInterval(() => {
     seconds++;
     const mins = Math.floor(seconds / 60).toString().padStart(2, '0');
     const secs = (seconds % 60).toString().padStart(2, '0');
     document.getElementById('timer').innerText = `${mins}:${secs}`;
+    saveProgress(); // Save time elapsed
   }, 1000);
 }
 
@@ -32,31 +33,75 @@ function updateProgress() {
   document.getElementById('progress-bar').style.width = percent + "%";
 }
 
+// --- Persistence Logic ---
+
+function saveProgress() {
+  const quizState = {
+    currentIdx,
+    score,
+    seconds,
+    shuffledQuestions,
+    mastery
+  };
+  localStorage.setItem('fl_quiz_progress', JSON.stringify(quizState));
+}
+
+function loadProgress() {
+  const saved = localStorage.getItem('fl_quiz_progress');
+  if (saved) {
+    const state = JSON.parse(saved);
+    currentIdx = state.currentIdx;
+    score = state.score;
+    seconds = state.seconds || 0;
+    shuffledQuestions = state.shuffledQuestions;
+    mastery = state.mastery || {};
+    return true;
+  }
+  return false;
+}
+
+function clearSavedProgress() {
+  localStorage.removeItem('fl_quiz_progress');
+}
+
 // --- Core Quiz Logic ---
 
-async function init() {
+async function init(selectedCat = 'All') {
   try {
     const response = await fetch('data.json');
     if (!response.ok) throw new Error("Failed to load questions");
     questions = await response.json();
 
-    shuffledQuestions = shuffleArray([...questions]);
-    currentIdx = 0;
-    score = 0;
-    mastery = {}; // Reset mastery for new session
+    // Check if we should resume or start fresh
+    const isResuming = loadProgress();
 
-    document.getElementById('score').innerText = `Score: 0/${shuffledQuestions.length}`;
-    startTimer();
+    if (!isResuming) {
+      let filtered = selectedCat === 'All'
+        ? [...questions]
+        : questions.filter(q => q.cat === selectedCat);
+
+      shuffledQuestions = shuffleArray(filtered);
+      currentIdx = 0;
+      score = 0;
+      seconds = 0;
+      mastery = {};
+    }
+
+    document.getElementById('score').innerText = `Score: ${score}/${shuffledQuestions.length}`;
+    startTimer(seconds);
     showQuestion();
   } catch (error) {
     console.error("Error:", error);
-    document.getElementById('question-text').innerText = "⚠️ Error loading data.json. Ensure you are using a Live Server.";
+    document.getElementById('question-text').innerText = "⚠️ Error loading data.json.";
   }
 }
 
 function showQuestion() {
   window.scrollTo({ top: 0, behavior: 'smooth' });
   const qData = shuffledQuestions[currentIdx];
+
+  if (!qData) return finishQuiz();
+
   document.getElementById('category-tag').innerText = qData.cat;
   document.getElementById('question-text').innerText = qData.q;
   document.getElementById('feedback-area').classList.add('hidden');
@@ -65,8 +110,8 @@ function showQuestion() {
   container.innerHTML = '';
 
   const optionsWithIndices = qData.options.map((opt, i) => ({ text: opt, originalIdx: i }));
-  shuffleArray(optionsWithIndices);
 
+  // Note: We don't reshuffle options on a reload to keep the UI consistent
   optionsWithIndices.forEach((optObj) => {
     const btn = document.createElement('button');
     btn.className = "w-full text-left p-3 rounded-xl border-2 border-slate-100 hover:border-blue-400 hover:bg-blue-50 transition-all duration-200 text-slate-600 font-medium flex justify-between items-center group text-sm";
@@ -107,17 +152,40 @@ function checkAnswer(selectedIdx, clickedBtn) {
     document.getElementById('feedback-text').className = "text-red-600 font-bold mb-1";
   }
 
-  // Explanation Formatting
+  // --- Explanation Formatting ---
   let formattedExplanation = qData.explanation || "No explanation provided.";
-  formattedExplanation = formattedExplanation
-    .replace(/(Key Point:)/g, '<strong class="text-blue-600">$1</strong>')
-    .replace(/(Calculation:)/g, '<strong class="text-purple-600 font-bold">$1</strong>')
-    .replace(/(Correction:)/g, '<strong class="text-red-500">$1</strong>');
 
+  // Bold color highlights for specific terms
+  formattedExplanation = formattedExplanation
+    .replace(/(Key Point:)/g, '<strong class="text-blue-600 font-bold">$1</strong>')
+    .replace(/(Calculation:)/g, '<strong class="text-purple-600 font-bold">$1</strong>')
+    .replace(/(Correction:)/g, '<strong class="text-red-500 font-bold">$1</strong>');
+
+  // Set the "small, gray, italic" look you preferred
+  explanationEl.className = "text-xs text-slate-500 font-normal italic mb-4 leading-relaxed px-4";
   explanationEl.innerHTML = formattedExplanation;
+
   document.getElementById('score').innerText = `Score: ${score}/${shuffledQuestions.length}`;
   feedbackArea.classList.remove('hidden');
+  saveProgress();
 }
+
+// --- Keyboard Support ---
+window.addEventListener('keydown', (e) => {
+  if (document.getElementById('main-container').classList.contains('hidden')) return;
+
+  if (['1', '2', '3', '4'].includes(e.key)) {
+    const buttons = document.querySelectorAll('#options-container button');
+    if (buttons[e.key - 1] && !buttons[e.key - 1].disabled) {
+      buttons[e.key - 1].click();
+    }
+  } else if (e.key === 'Enter') {
+    const nextBtn = document.getElementById('next-btn');
+    if (!nextBtn.classList.contains('hidden')) {
+      nextBtn.click();
+    }
+  }
+});
 
 // --- Navigation & Start ---
 
@@ -125,6 +193,7 @@ document.getElementById('next-btn').onclick = () => {
   currentIdx++;
   if (currentIdx < shuffledQuestions.length) {
     showQuestion();
+    saveProgress();
   } else {
     finishQuiz();
   }
@@ -132,6 +201,8 @@ document.getElementById('next-btn').onclick = () => {
 
 function finishQuiz() {
   clearInterval(timerInterval);
+  localStorage.removeItem('fl_quiz_progress');
+  clearSavedProgress(); // Quiz complete, clear storage
   document.getElementById('progress-bar').style.width = "100%";
 
   const percentage = Math.round((score / shuffledQuestions.length) * 100);
@@ -140,7 +211,6 @@ function finishQuiz() {
   const statusClass = passed ? "text-green-600" : "text-red-600";
   const subMessage = passed ? "Congratulations! You're ready for the state exam." : "Review the material and try again.";
 
-  // Build Mastery breakdown
   let masteryHTML = `<div class="mt-6 text-left mb-6">
                       <p class="text-xs font-bold uppercase text-slate-400 mb-2">Performance by Category</p>`;
   for (const cat in mastery) {
@@ -158,12 +228,14 @@ function finishQuiz() {
     confetti({ particleCount: 150, spread: 70, origin: { y: 0.6 } });
   }
 
+  const footer = document.getElementById('quiz-footer');
+  if (footer) footer.classList.remove('hidden');
+
   document.getElementById('quiz-box').innerHTML = `
       <div class="text-center pb-10 animate-in">
           <h2 class="text-3xl font-black mb-2 ${statusClass}">${statusText}</h2>
           <p class="text-lg font-bold text-slate-700 mb-1">${percentage}% Correct</p>
           <p class="text-sm text-slate-500 mb-6">${subMessage}</p>
-          
           <div class="bg-slate-50 rounded-lg p-4 mt-4 border border-slate-100">
               <p class="text-sm font-semibold text-slate-600">Final Score: ${score}/${shuffledQuestions.length}</p>
               <p class="text-xs text-slate-400">Total Time: ${document.getElementById('timer').innerText}</p>
@@ -175,18 +247,95 @@ function finishQuiz() {
       </div>`;
 }
 
+// --- Formula Cheat Sheet Logic ---
+function initFormulaModal() {
+  const modal = document.getElementById('formula-modal');
+  const openBtn = document.getElementById('formula-btn');
+  const closeBtn = document.getElementById('close-modal');
+
+  if (openBtn) {
+    openBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      modal.classList.remove('hidden');
+    });
+  }
+
+  if (closeBtn) {
+    closeBtn.addEventListener('click', () => {
+      modal.classList.add('hidden');
+    });
+  }
+
+  // Close modal if user clicks outside the white box
+  modal.addEventListener('click', (event) => {
+    if (event.target === modal) {
+      modal.classList.add('hidden');
+    }
+  });
+}
+
+// --- Navigation & Start ---
 async function startQuiz() {
   const welcome = document.getElementById('welcome-screen');
   const main = document.getElementById('main-container');
+  const footer = document.getElementById('quiz-footer');
 
   welcome.classList.add('animate-out');
+
   setTimeout(async () => {
     welcome.classList.add('hidden');
+    // Hide footer during quiz
+    if (footer) footer.classList.add('hidden');
+
     main.classList.remove('hidden');
     main.classList.add('animate-in');
+
+    initFormulaModal();
     await init();
   }, 300);
 }
 
-// Final Step: Link the button
-document.getElementById('start-quiz-btn').onclick = startQuiz;
+// Handle the Next Button
+document.getElementById('next-btn').onclick = () => {
+  currentIdx++;
+  if (currentIdx < shuffledQuestions.length) {
+    showQuestion();
+    saveProgress();
+  } else {
+    finishQuiz();
+  }
+};
+
+// --- App Initialization & Button Logic ---
+document.addEventListener('DOMContentLoaded', () => {
+  const startBtn = document.getElementById('start-quiz-btn');
+  const newQuizBtn = document.getElementById('new-quiz-btn');
+  const footer = document.getElementById('quiz-footer');
+
+  // Check if there is a saved session in LocalStorage
+  if (localStorage.getItem('fl_quiz_progress')) {
+    // 1. Change the primary button to "Resume Quiz" and style it green
+    startBtn.innerHTML = `Resume Quiz <i class="fa-solid fa-rotate-right ml-2 text-xs"></i>`;
+    startBtn.classList.remove('bg-blue-600', 'hover:bg-blue-700');
+    startBtn.classList.add('bg-green-600', 'hover:bg-green-700');
+
+    // 2. Reveal the "Start New Quiz" button by removing the 'hidden' class
+    if (newQuizBtn) {
+      newQuizBtn.classList.remove('hidden');
+    }
+  }
+
+  // Handle "Resume / Take Quiz"
+  startBtn.onclick = startQuiz;
+
+  // Handle "Start New Quiz"
+  if (newQuizBtn) {
+    newQuizBtn.onclick = () => {
+      const confirmNew = confirm("This will delete your current progress. Are you sure you want to start a new quiz?");
+      if (confirmNew) {
+        clearSavedProgress(); // Removes progress from localStorage
+        location.reload();    // Hard reset to clear variables and start at the Welcome screen
+      }
+    };
+  }
+});
