@@ -12,6 +12,11 @@
   /* Subtle indigo for the stars */
 }
 
+html {
+  background-color: #d2d2d2;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='32' viewBox='0 0 16 32'%3E%3Cg fill='%236366f1' fill-opacity='0.12'%3E%3Cpath fill-rule='evenodd' d='M0 24h4v2H0v-2zm0 4h6v2H0v-2zm0-8h2v2H0v-2zM0 0h4v2H0V0zm0 4h2v2H0V4zm16 20h-6v2h6v-2zm0 4H8v2h8v-2zm0-8h-4v2h4v-2zm0-20h-6v2h6V0zm0 4h-4v2h4V4zm-2 12h2v2h-2v-2zm0-8h2v2h-2V8zM2 8h10v2H2V8zm0 8h10v2H2v-2zm-2-4h14v2H0v-2zm4-8h6v2H4V4zm0 16h6v2H4v-2zM6 0h2v2H6V0zm0 24h2v2H6v-2z'/%3E%3C/g%3E%3C/svg%3E");
+}
+
 body {
   margin: 0;
   min-height: 100vh;
@@ -27,6 +32,11 @@ body {
     radial-gradient(circle at center, rgba(99, 102, 241, 0.15) 0%, transparent 70%),
     url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cg fill='%236366f1' fill-opacity='0.1'%3E%3Cpolygon fill-rule='evenodd' points='8 4 12 6 8 8 6 12 4 8 0 6 4 4 6 0 8 4'/%3E%3C/g%3E%3C/svg%3E");
   background-attachment: fixed;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+
+  --sb-track-color: #232E33;
+  --sb-thumb-color: #3498db;
+  --sb-size: 12px;
 }
 
 .quiz-container {
@@ -57,20 +67,6 @@ body {
   body {
     scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
   }
-}
-
-body {
-  margin: 0;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  font-family: 'Inter', sans-serif;
-  overflow-x: hidden;
-  --sb-track-color: #232E33;
-  --sb-thumb-color: #3498db;
-  --sb-size: 12px;
 }
 
 /* Add a wrapper for the quiz area to handle the spacing */
@@ -134,15 +130,6 @@ h2 {
   letter-spacing: 1px;
   color: #999;
   margin-bottom: 10px;
-}
-
-#question-text {
-  font-size: 1rem;
-  /* Smaller text-base size */
-  font-weight: 700;
-  color: var(--dark);
-  margin-bottom: 24px;
-  line-height: 1.6;
 }
 
 /* Option Buttons */

@@ -7,30 +7,45 @@
   <title>Florida Real Estate Master Drill</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-  <link rel="stylesheet" href="assets/style.css">
   <style>
-    /* Custom Scrollbar for the whole page */
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=JetBrains+Mono:wght@500&display=swap');
+
+    :root {
+      --slate-900: #0f172a;
+      --indigo-500: #6366f1;
+      --cyan-500: #06b6d4;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #f8fafc;
+      /* Minimalist off-white */
+      color: #1e293b;
+    }
+
+    .mono {
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    /* Custom Scrollbar */
     ::-webkit-scrollbar {
-      width: 8px;
+      width: 6px;
     }
 
     ::-webkit-scrollbar-track {
-      background: #f1f5f9;
+      background: transparent;
     }
 
     ::-webkit-scrollbar-thumb {
-      background: #cbd5e1;
+      background: #e2e8f0;
       border-radius: 10px;
     }
 
-    ::-webkit-scrollbar-thumb:hover {
-      background: #94a3b8;
-    }
-
-    @keyframes fadeIn {
+    /* Animations */
+    @keyframes slideUp {
       from {
         opacity: 0;
-        transform: translateY(10px);
+        transform: translateY(20px);
       }
 
       to {
@@ -39,97 +54,102 @@
       }
     }
 
-    .animate-in {
-      animation: fadeIn 0.4s ease forwards;
+    .animate-slide-up {
+      animation: slideUp 0.4s ease-out forwards;
     }
 
-    @keyframes fadeOut {
-      from {
-        opacity: 1;
-        transform: scale(1);
-      }
-
-      to {
-        opacity: 0;
-        transform: scale(0.95);
-      }
+    /* The 3D Neo-Brutalist Shadow Effect */
+    .btn-brutal-cyan {
+      transition: all 0.1s;
+      box-shadow: 4px 4px 0px 0px var(--cyan-500);
     }
 
-    .animate-out {
-      animation: fadeOut 0.3s ease forwards;
+    .btn-brutal-cyan:hover {
+      transform: translate(2px, 2px);
+      box-shadow: 0px 0px 0px 0px var(--cyan-500);
+    }
+
+    .btn-brutal-indigo {
+      transition: all 0.1s;
+      box-shadow: 4px 4px 0px 0px var(--indigo-500);
+    }
+
+    .btn-brutal-indigo:hover {
+      transform: translate(2px, 2px);
+      box-shadow: 0px 0px 0px 0px var(--indigo-500);
     }
   </style>
 </head>
 
-<body class="bg-slate-100 min-h-screen flex flex-col items-center">
-  <main class="flex-grow flex flex-col items-center justify-center py-8 px-4 w-full max-w-md">
+<body class="min-h-screen flex flex-col items-center py-12 px-4">
 
-    <div id="welcome-screen"
-      class="bg-white p-8 shadow-xl rounded-2xl w-full border border-gray-200 text-center animate-in">
-      <div class="mb-6">
-        <div class="w-20 h-20 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
-          <i class="fa-solid fa-house-chimney text-3xl"></i>
+  <main class="w-full max-w-xl animate-slide-up">
+
+    <div id="welcome-screen" class="bg-white border-2 border-slate-200 rounded-3xl p-10 shadow-sm text-center">
+      <div class="mb-10">
+        <div class="inline-block p-4 rounded-2xl bg-slate-50 border border-slate-100 mb-6">
+          <i class="fa-solid fa-house-chimney text-3xl text-indigo-500"></i>
         </div>
-        <h1 class="text-2xl font-black text-slate-800 mb-2">Florida Real Estate Master Drill</h1>
-        <p class="text-slate-500 text-sm leading-relaxed">
-          Prepare for your state exam with our comprehensive practice drill.
+        <h1 class="text-3xl font-800 text-slate-900 tracking-tight mb-3">RE Master Drill</h1>
+        <p class="text-slate-500 text-sm max-w-xs mx-auto">
+          146 Florida Real Estate questions. <br />Precision study for the Pearson VUE exam.
         </p>
       </div>
 
-      <div class="space-y-4 mb-8 text-left bg-slate-50 p-4 rounded-xl border border-slate-100">
-        <div class="flex items-center gap-3 text-xs font-semibold text-slate-600">
-          <i class="fa-solid fa-check text-green-500"></i> Instant Feedback
-        </div>
-        <div class="flex items-center gap-3 text-xs font-semibold text-slate-600">
-          <i class="fa-solid fa-calculator text-blue-500"></i> Math Cheat Sheet Included
-        </div>
+      <div class="flex flex-col md:flex-row gap-4 mb-6">
+        <button id="start-quiz-btn"
+          class="flex-1 h-14 bg-white border-2 border-cyan-500 text-cyan-600 font-bold rounded-xl btn-brutal-cyan flex items-center justify-center gap-2">
+          Full Drill <i class="fa-solid fa-play text-[10px]"></i>
+        </button>
+        <button id="quick-20-btn"
+          class="flex-1 h-14 bg-white border-2 border-indigo-500 text-indigo-600 font-bold rounded-xl btn-brutal-indigo flex items-center justify-center gap-2">
+          Quick 20 <i class="fa-solid fa-bolt text-[10px]"></i>
+        </button>
       </div>
 
-      <button id="start-quiz-btn"
-        class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-8 rounded-xl shadow-lg transition-all transform hover:scale-[1.02]">
-        Take Quiz <i class="fa-solid fa-play ml-2 text-xs"></i>
-      </button>
-
-      <button id="new-quiz-btn"
-        class="hidden w-full mt-3 bg-white border-2 border-slate-200 text-slate-500 hover:text-slate-700 hover:border-slate-300 font-bold py-3 px-8 rounded-xl transition-all">
-        Start New Quiz
+      <button id="resume-btn"
+        class="hidden w-full py-3 text-slate-400 text-xs font-semibold uppercase tracking-widest hover:text-slate-600 transition-colors">
+        Resume Previous Session
       </button>
     </div>
 
-    <div id="main-container"
-      class="hidden bg-white p-6 shadow-lg rounded-2xl w-full border border-gray-200 flex flex-col transition-all mb-4">
-
-      <div class="flex justify-between items-start mb-4">
+    <div id="main-container" class="hidden bg-white border-2 border-slate-200 rounded-3xl shadow-sm overflow-hidden">
+      <div class="px-8 pt-8 pb-4 flex justify-between items-end">
         <div>
-          <h1 class="text-lg font-black text-slate-800 tracking-tight">FL Real Estate</h1>
-          <div id="timer" class="text-xs font-mono text-slate-400">00:00</div>
+          <span id="category-tag" class="text-[10px] font-bold uppercase tracking-[0.2em] text-slate-400">Section
+            01</span>
+          <div id="timer" class="mono text-xs text-indigo-500 mt-1">00:00</div>
         </div>
         <div class="text-right">
-          <div id="score" class="text-sm font-bold text-blue-600 mb-1">Score: 0/0</div>
-          <button id="formula-btn" type="button"
-            class="flex items-center gap-2 text-[10px] font-black uppercase tracking-wider text-blue-500 bg-blue-50 px-3 py-1 rounded-full border border-blue-100 hover:bg-blue-100 transition-colors">
-            <i class="fa-solid fa-calculator"></i> Formulas
+          <div id="score" class="text-xs font-bold text-slate-900">SCORE: 0/0</div>
+          <button id="formula-btn"
+            class="text-[10px] font-black uppercase text-indigo-400 hover:text-indigo-600 mt-1 transition-colors">
+            <i class="fa-solid fa-calculator mr-1"></i> Formulas
           </button>
         </div>
       </div>
 
-      <div class="w-full bg-gray-100 rounded-full h-1.5 mb-6">
-        <div id="progress-bar" class="bg-blue-500 h-1.5 rounded-full transition-all duration-500" style="width: 0%">
+      <div class="px-8 mb-8">
+        <div class="w-full bg-slate-100 h-1 rounded-full overflow-hidden">
+          <div id="progress-bar" class="bg-indigo-500 h-full transition-all duration-500" style="width: 0%"></div>
         </div>
       </div>
 
-      <div id="quiz-box" class="flex flex-col">
-        <div id="card-content">
-          <span id="category-tag" class="text-[10px] font-bold tracking-widest text-slate-400 uppercase">Category</span>
-          <h2 id="question-text" class="text-base text-slate-700 mt-1 mb-6 leading-snug">Loading...</h2>
-          <div id="options-container" class="space-y-3"></div>
+      <div class="px-8 pb-10">
+        <h2 id="question-text" class="text-lg font-600 text-slate-800 leading-snug mb-8">
+          Question loading...
+        </h2>
+
+        <div id="options-container" class="space-y-3">
         </div>
 
-        <div id="feedback-area" class="hidden mt-8 pt-6 border-t border-slate-100 animate-in">
-          <p id="feedback-text" class="text-sm font-bold mb-2"></p>
-          <p id="explanation-text" class="text-xs text-slate-500 font-normal italic mb-4 leading-relaxed px-4"></p>
+        <div id="feedback-area" class="hidden mt-8 animate-slide-up">
+          <div class="p-5 rounded-2xl bg-slate-50 border border-slate-100 mb-6">
+            <p id="feedback-text" class="text-xs font-bold uppercase tracking-widest mb-2"></p>
+            <p id="explanation-text" class="text-sm text-slate-500 leading-relaxed"></p>
+          </div>
           <button id="next-btn"
-            class="w-full bg-slate-800 hover:bg-black text-white font-bold py-4 px-6 rounded-xl transition-all flex items-center justify-center gap-2 shadow-lg">
+            class="w-full h-14 bg-slate-900 text-white font-bold rounded-xl hover:bg-black transition-all flex items-center justify-center gap-2">
             Next Question <i class="fa-solid fa-arrow-right text-xs"></i>
           </button>
         </div>
@@ -138,54 +158,115 @@
   </main>
 
   <div id="formula-modal"
-    class="hidden fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 flex items-center justify-center p-4">
-    <div class="bg-white rounded-3xl shadow-2xl max-w-sm w-full max-h-[80vh] overflow-hidden flex flex-col">
-      <div class="p-6 border-b border-slate-100 flex justify-between items-center bg-white">
-        <h3 class="text-lg font-black text-slate-800">Math Formulas</h3>
-        <button id="close-modal"
-          class="w-8 h-8 flex items-center justify-center rounded-full bg-slate-100 text-slate-500 hover:bg-slate-200 transition-colors">
-          <i class="fa-solid fa-xmark"></i>
-        </button>
+    class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/10 backdrop-blur-md">
+    <div
+      class="bg-white border-2 border-slate-200 rounded-[2.5rem] w-full max-w-md shadow-2xl overflow-hidden flex flex-col max-h-[85vh]">
+
+      <div class="p-8 border-b border-slate-50">
+        <div class="flex justify-between items-center mb-2">
+          <h3 class="text-xl font-800 text-slate-900 tracking-tight">Exam Reference</h3>
+          <button id="close-modal" class="text-slate-300 hover:text-slate-900 transition-colors">
+            <i class="fa-solid fa-xmark text-xl"></i>
+          </button>
+        </div>
+        <p class="text-[9px] font-bold text-slate-400 uppercase tracking-widest">Florida State Edition v2026</p>
       </div>
-      <div class="p-6 space-y-6 overflow-y-auto">
-        <div>
-          <h4 class="font-bold text-blue-600 text-[10px] uppercase tracking-widest mb-2">Transfer Taxes</h4>
-          <div class="bg-slate-50 p-3 rounded-xl border border-slate-100 text-xs leading-relaxed">
-            <p><strong>Deed Stamps:</strong> (Price / 100) * $0.70 <br><span
-                class="text-[10px] text-slate-400 italic">(Round up to nearest 100)</span></p>
-            <p class="mt-3"><strong>Note Stamps:</strong> (New/Assumed Debt / 100) * $0.35</p>
-            <p class="mt-3"><strong>Intangible Tax:</strong> New Mortgage * $0.002</p>
+
+      <div class="p-8 space-y-8 overflow-y-auto custom-scrollbar">
+
+        <section>
+          <h4 class="text-[10px] font-black uppercase text-rose-500 mb-4 tracking-widest flex items-center gap-2">
+            <i class="fa-solid fa-receipt text-[12px]"></i> State Transfer Taxes
+          </h4>
+          <div class="space-y-4">
+            <div class="group">
+              <p class="text-[10px] font-bold text-slate-400 uppercase mb-1">Deed Stamps (Documents)</p>
+              <p class="text-sm font-semibold text-slate-800 mono">(Price / 100) * $0.70</p>
+              <p class="text-[10px] italic text-slate-400 mt-1">Note: Round Price UP to nearest 100 first.</p>
+            </div>
+            <div class="group">
+              <p class="text-[10px] font-bold text-slate-400 uppercase mb-1">Note Stamps (Promissory)</p>
+              <p class="text-sm font-semibold text-slate-800 mono">(Debt / 100) * $0.35</p>
+            </div>
+            <div class="group">
+              <p class="text-[10px] font-bold text-slate-400 uppercase mb-1">Intangible Tax (New Mortgage)</p>
+              <p class="text-sm font-semibold text-slate-800 mono">New Debt * 0.002</p>
+            </div>
           </div>
-        </div>
-        <div>
-          <h4 class="font-bold text-purple-600 text-[10px] uppercase tracking-widest mb-2">Property Measures</h4>
-          <div class="bg-slate-50 p-3 rounded-xl border border-slate-100 text-xs leading-relaxed">
-            <p><strong>Acre:</strong> 43,560 Square Feet</p>
-            <p class="mt-2"><strong>Section:</strong> 640 Acres (1 Square Mile)</p>
+        </section>
+
+        <section>
+          <h4 class="text-[10px] font-black uppercase text-purple-500 mb-4 tracking-widest flex items-center gap-2">
+            <i class="fa-solid fa-chart-line text-[12px]"></i> Investment & Appraisal
+          </h4>
+          <div class="space-y-4">
+            <div class="group">
+              <p class="text-[10px] font-bold text-slate-400 uppercase mb-1">The IRV Circle</p>
+              <p class="text-sm font-semibold text-slate-800 mono">Income = Rate × Value</p>
+              <p class="text-[10px] italic text-slate-400 mt-1">V = I/R | R = I/V</p>
+            </div>
+            <div class="group">
+              <p class="text-[10px] font-bold text-slate-400 uppercase mb-1">Net Operating Income (NOI)</p>
+              <p class="text-sm font-semibold text-slate-800 mono">EGI - Operating Expenses</p>
+            </div>
           </div>
-        </div>
-        <div>
-          <h4 class="font-bold text-green-600 text-[10px] uppercase tracking-widest mb-2">Commission</h4>
-          <div class="bg-slate-50 p-3 rounded-xl border border-slate-100 text-xs leading-relaxed">
-            <p><strong>Seller's Net:</strong> (Target + Costs) / (100% - Comm %)</p>
+        </section>
+
+        <section>
+          <h4 class="text-[10px] font-black uppercase text-emerald-500 mb-4 tracking-widest flex items-center gap-2">
+            <i class="fa-solid fa-map text-[12px]"></i> Land Measurement
+          </h4>
+          <div class="space-y-4">
+            <div class="group">
+              <p class="text-[10px] font-bold text-slate-400 uppercase mb-1">1 Acre</p>
+              <p class="text-sm font-semibold text-slate-800 mono">43,560 Square Feet</p>
+            </div>
+            <div class="group">
+              <p class="text-[10px] font-bold text-slate-400 uppercase mb-1">1 Section</p>
+              <p class="text-sm font-semibold text-slate-800 mono">640 Acres (1 Sq. Mile)</p>
+            </div>
           </div>
-        </div>
+        </section>
+
+        <section>
+          <h4 class="text-[10px] font-black uppercase text-orange-500 mb-4 tracking-widest flex items-center gap-2">
+            <i class="fa-solid fa-wallet text-[12px]"></i> Property Taxes
+          </h4>
+          <div class="space-y-4">
+            <div class="group">
+              <p class="text-[10px] font-bold text-slate-400 uppercase mb-1">Taxable Value</p>
+              <p class="text-sm font-semibold text-slate-800 mono">Assessed Value - Exemptions</p>
+            </div>
+            <div class="group">
+              <p class="text-[10px] font-bold text-slate-400 uppercase mb-1">Annual Tax Bill</p>
+              <p class="text-sm font-semibold text-slate-800 mono">Taxable Value × Millage Rate</p>
+              <p class="text-[10px] italic text-slate-400 mt-1">Move decimal 3 places left for mills.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="pt-4 border-t border-slate-50">
+          <h4 class="text-[10px] font-black uppercase text-indigo-500 mb-4 tracking-widest flex items-center gap-2">
+            <i class="fa-solid fa-gavel text-[12px]"></i> Legal Quick-Ref
+          </h4>
+          <div class="space-y-3 text-[11px] text-slate-500 leading-relaxed">
+            <p>• <strong>COLD-AC:</strong> Single Agent Fiduciary Duties.</p>
+            <p>• <strong>PITT:</strong> Joint Tenancy (Possession, Interest, Time, Title).</p>
+            <p>• <strong>PETE:</strong> Govt Powers (Police, Eminent Domain, Tax, Escheat).</p>
+            <p>• <strong>$5,000:</strong> Maximum Administrative Fine per violation.</p>
+          </div>
+        </section>
+
       </div>
     </div>
   </div>
 
-  <footer id="quiz-footer" class="bg-gray-800 text-white py-6 px-3 w-full mt-auto">
-    <div class="max-w-md mx-auto flex flex-col items-center gap-4">
-      <div class="flex gap-6 text-slate-400">
-        <a href="https://github.com/codelikeagirl29" class="hover:text-stone-400 transition-colors"><i
-            class="fab fa-github"></i></a>
-        <a href="http://linkedin.com/in/lindsey-howard" class="hover:text-sky-700 transition-colors"><i
-            class="fab fa-linkedin-in"></i></a>
-        <a href="https://www.facebook.com/lindseyhowardrealestate/" class="hover:text-blue-600 transition-colors"><i
-            class="fab fa-facebook-f"></i></a>
-      </div>
-      <p class="text-[10px] font-bold uppercase tracking-widest text-slate-400">© 2026 RE Master Drill</p>
+  <footer class="mt-12 text-center">
+    <div class="flex gap-4 justify-center mb-4 text-slate-300">
+      <a href="#" class="hover:text-indigo-500 transition-colors"><i class="fab fa-github"></i></a>
+      <a href="#" class="hover:text-indigo-500 transition-colors"><i class="fab fa-linkedin-in"></i></a>
     </div>
+    <p class="text-[9px] font-bold text-slate-400 uppercase tracking-[0.3em]">© 2026 RE Master Drill</p>
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>

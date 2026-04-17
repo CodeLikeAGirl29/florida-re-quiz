@@ -9,11 +9,12 @@ let mastery = {};
 // --- Helper Functions ---
 
 function shuffleArray(array) {
-  for (let i = array.length - 1; i > 0; i--) {
+  const shuffled = [...array];
+  for (let i = shuffled.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
-    [array[i], array[j]] = [array[j], array[i]];
+    [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
   }
-  return array;
+  return shuffled;
 }
 
 function startTimer(resumeSeconds = 0) {
@@ -24,7 +25,7 @@ function startTimer(resumeSeconds = 0) {
     const mins = Math.floor(seconds / 60).toString().padStart(2, '0');
     const secs = (seconds % 60).toString().padStart(2, '0');
     document.getElementById('timer').innerText = `${mins}:${secs}`;
-    saveProgress(); // Save time elapsed
+    saveProgress();
   }, 1000);
 }
 
@@ -60,39 +61,33 @@ function loadProgress() {
   return false;
 }
 
-function clearSavedProgress() {
-  localStorage.removeItem('fl_quiz_progress');
-}
-
 // --- Core Quiz Logic ---
 
-async function init(selectedCat = 'All') {
+async function init(limit = null) {
   try {
     const response = await fetch('data.json');
     if (!response.ok) throw new Error("Failed to load questions");
     questions = await response.json();
 
-    // Check if we should resume or start fresh
-    const isResuming = loadProgress();
+    // 1. Shuffle and optionally slice
+    shuffledQuestions = shuffleArray(questions);
 
-    if (!isResuming) {
-      let filtered = selectedCat === 'All'
-        ? [...questions]
-        : questions.filter(q => q.cat === selectedCat);
-
-      shuffledQuestions = shuffleArray(filtered);
-      currentIdx = 0;
-      score = 0;
-      seconds = 0;
-      mastery = {};
+    if (limit) {
+      shuffledQuestions = shuffledQuestions.slice(0, limit);
     }
 
-    document.getElementById('score').innerText = `Score: ${score}/${shuffledQuestions.length}`;
+    currentIdx = 0;
+    score = 0;
+    seconds = 0;
+    mastery = {};
+
+    document.getElementById('score').innerText = `SCORE: ${score}/${shuffledQuestions.length}`;
     startTimer(seconds);
     showQuestion();
+    saveProgress();
   } catch (error) {
     console.error("Error:", error);
-    document.getElementById('question-text').innerText = "⚠️ Error loading data.json.";
+    document.getElementById('question-text').innerText = "⚠️ Error loading questions.";
   }
 }
 
@@ -102,21 +97,19 @@ function showQuestion() {
 
   if (!qData) return finishQuiz();
 
-  document.getElementById('category-tag').innerText = qData.cat;
+  document.getElementById('category-tag').innerText = qData.cat || "General";
   document.getElementById('question-text').innerText = qData.q;
   document.getElementById('feedback-area').classList.add('hidden');
 
   const container = document.getElementById('options-container');
   container.innerHTML = '';
 
-  const optionsWithIndices = qData.options.map((opt, i) => ({ text: opt, originalIdx: i }));
-
-  // Note: We don't reshuffle options on a reload to keep the UI consistent
-  optionsWithIndices.forEach((optObj) => {
+  qData.options.forEach((opt, i) => {
     const btn = document.createElement('button');
-    btn.className = "w-full text-left p-3 rounded-xl border-2 border-slate-100 hover:border-blue-400 hover:bg-blue-50 transition-all duration-200 text-slate-600 font-medium flex justify-between items-center group text-sm";
-    btn.innerHTML = `<span>${optObj.text}</span> <i class="fa-solid fa-circle-check opacity-0 group-hover:opacity-20"></i>`;
-    btn.onclick = () => checkAnswer(optObj.originalIdx, btn);
+    // Using your Minimalist / Neo-Brutal style for options
+    btn.className = "w-full text-left px-5 py-4 rounded-xl border-2 border-slate-100 hover:border-indigo-500 hover:bg-indigo-50/50 transition-all duration-100 text-slate-600 font-semibold flex justify-between items-center group text-sm";
+    btn.innerHTML = `<span>${opt}</span> <span class="mono text-[10px] opacity-0 group-hover:opacity-100 text-indigo-400 font-bold">KEY [${i + 1}]</span>`;
+    btn.onclick = () => checkAnswer(i, btn);
     container.appendChild(btn);
   });
 
@@ -136,36 +129,38 @@ function checkAnswer(selectedIdx, clickedBtn) {
   btns.forEach(b => b.disabled = true);
 
   if (selectedIdx === correctIdx) {
-    clickedBtn.classList.add('bg-green-500', 'text-white', 'border-green-600');
+    // Sharp borders and soft backgrounds for minimalist look
+    clickedBtn.classList.replace('border-slate-100', 'border-indigo-500');
+    clickedBtn.classList.add('bg-indigo-50/50');
+    clickedBtn.classList.replace('border-slate-100', 'border-green-500');
+    clickedBtn.classList.add('bg-green-50');
     score++;
     mastery[qData.cat].correct++;
-    document.getElementById('feedback-text').innerText = "✨ Correct!";
-    document.getElementById('feedback-text').className = "text-green-600 font-bold mb-1";
+    document.getElementById('feedback-text').innerText = "CORRECT";
+    document.getElementById('feedback-text').className = "text-[10px] font-black tracking-widest text-green-600 mb-1";
   } else {
-    clickedBtn.classList.add('bg-red-500', 'text-white', 'border-red-600');
-    btns.forEach(b => {
-      if (b.innerText.includes(qData.options[correctIdx])) {
-        b.classList.add('bg-green-100', 'border-green-500', 'text-green-700');
-      }
-    });
-    document.getElementById('feedback-text').innerText = "❌ Incorrect.";
-    document.getElementById('feedback-text').className = "text-red-600 font-bold mb-1";
+    clickedBtn.classList.replace('border-slate-100', 'border-rose-500');
+    clickedBtn.classList.add('bg-rose-50/50');
+    btns[correctIdx].classList.replace('border-slate-100', 'border-emerald-500');
+    btns[correctIdx].classList.add('bg-emerald-50/50');
+    clickedBtn.classList.replace('border-slate-100', 'border-red-500');
+    clickedBtn.classList.add('bg-red-50');
+    btns[correctIdx].classList.replace('border-slate-100', 'border-green-500');
+    btns[correctIdx].classList.add('bg-green-50');
+
+    document.getElementById('feedback-text').innerText = "INCORRECT";
+    document.getElementById('feedback-text').className = "text-[10px] font-black tracking-widest text-red-600 mb-1";
   }
 
   // --- Explanation Formatting ---
   let formattedExplanation = qData.explanation || "No explanation provided.";
-
-  // Bold color highlights for specific terms
   formattedExplanation = formattedExplanation
-    .replace(/(Key Point:)/g, '<strong class="text-blue-600 font-bold">$1</strong>')
+    .replace(/(Key Point:)/g, '<strong class="text-indigo-600 font-bold">$1</strong>')
     .replace(/(Calculation:)/g, '<strong class="text-purple-600 font-bold">$1</strong>')
     .replace(/(Correction:)/g, '<strong class="text-red-500 font-bold">$1</strong>');
 
-  // Set the "small, gray, italic" look you preferred
-  explanationEl.className = "text-xs text-slate-500 font-normal italic mb-4 leading-relaxed px-4";
   explanationEl.innerHTML = formattedExplanation;
-
-  document.getElementById('score').innerText = `Score: ${score}/${shuffledQuestions.length}`;
+  document.getElementById('score').innerText = `SCORE: ${score}/${shuffledQuestions.length}`;
   feedbackArea.classList.remove('hidden');
   saveProgress();
 }
@@ -181,13 +176,14 @@ window.addEventListener('keydown', (e) => {
     }
   } else if (e.key === 'Enter') {
     const nextBtn = document.getElementById('next-btn');
-    if (!nextBtn.classList.contains('hidden')) {
+    const feedbackArea = document.getElementById('feedback-area');
+    if (!feedbackArea.classList.contains('hidden')) {
       nextBtn.click();
     }
   }
 });
 
-// --- Navigation & Start ---
+// --- Navigation ---
 
 document.getElementById('next-btn').onclick = () => {
   currentIdx++;
@@ -202,140 +198,72 @@ document.getElementById('next-btn').onclick = () => {
 function finishQuiz() {
   clearInterval(timerInterval);
   localStorage.removeItem('fl_quiz_progress');
-  clearSavedProgress(); // Quiz complete, clear storage
-  document.getElementById('progress-bar').style.width = "100%";
 
   const percentage = Math.round((score / shuffledQuestions.length) * 100);
-  const passed = percentage >= 70;
-  const statusText = passed ? "PASSED" : "FAILED";
-  const statusClass = passed ? "text-green-600" : "text-red-600";
-  const subMessage = passed ? "Congratulations! You're ready for the state exam." : "Review the material and try again.";
-
-  let masteryHTML = `<div class="mt-6 text-left mb-6">
-                      <p class="text-xs font-bold uppercase text-slate-400 mb-2">Performance by Category</p>`;
-  for (const cat in mastery) {
-    const catScore = Math.round((mastery[cat].correct / mastery[cat].total) * 100);
-    const color = catScore >= 70 ? 'text-green-600' : 'text-red-500';
-    masteryHTML += `
-        <div class="flex justify-between items-center bg-white p-2 mb-1 rounded border border-slate-100">
-            <span class="text-xs font-medium text-slate-700">${cat}</span>
-            <span class="text-xs font-bold ${color}">${catScore}%</span>
-        </div>`;
-  }
-  masteryHTML += `</div>`;
+  const passed = percentage >= 75; // Pearson VUE Standard
 
   if (passed) {
     confetti({ particleCount: 150, spread: 70, origin: { y: 0.6 } });
   }
 
-  const footer = document.getElementById('quiz-footer');
-  if (footer) footer.classList.remove('hidden');
-
-  document.getElementById('quiz-box').innerHTML = `
-      <div class="text-center pb-10 animate-in">
-          <h2 class="text-3xl font-black mb-2 ${statusClass}">${statusText}</h2>
-          <p class="text-lg font-bold text-slate-700 mb-1">${percentage}% Correct</p>
-          <p class="text-sm text-slate-500 mb-6">${subMessage}</p>
-          <div class="bg-slate-50 rounded-lg p-4 mt-4 border border-slate-100">
-              <p class="text-sm font-semibold text-slate-600">Final Score: ${score}/${shuffledQuestions.length}</p>
-              <p class="text-xs text-slate-400">Total Time: ${document.getElementById('timer').innerText}</p>
-          </div>
-          ${masteryHTML}
-          <button id="restart-btn" onclick="location.reload()" class="w-full bg-slate-800 hover:bg-black text-white font-bold py-4 px-8 rounded-xl shadow-lg transition-all transform hover:scale-[1.02]">
-              Try Again
+  document.getElementById('main-container').innerHTML = `
+      <div class="p-10 text-center animate-slide-up">
+          <h2 class="text-3xl font-800 mb-2 ${passed ? 'text-green-600' : 'text-slate-900'}">
+            ${passed ? 'DRILL COMPLETE' : 'KEEP DRILLING'}
+          </h2>
+          <p class="text-4xl font-black text-slate-900 mb-1">${percentage}%</p>
+          <p class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-8">Final Score: ${score}/${shuffledQuestions.length}</p>
+          
+          <button onclick="location.reload()" class="w-full h-14 bg-slate-900 text-white font-bold rounded-xl hover:bg-black transition-all shadow-lg">
+              Return to Menu
           </button>
       </div>`;
 }
 
-// --- Formula Cheat Sheet Logic ---
+// --- UI Logic ---
+
+function startQuizUI() {
+  document.getElementById('welcome-screen').classList.add('hidden');
+  document.getElementById('main-container').classList.remove('hidden');
+  initFormulaModal();
+}
+
 function initFormulaModal() {
   const modal = document.getElementById('formula-modal');
   const openBtn = document.getElementById('formula-btn');
   const closeBtn = document.getElementById('close-modal');
 
-  if (openBtn) {
-    openBtn.addEventListener('click', (e) => {
-      e.preventDefault();
-      modal.classList.remove('hidden');
-    });
-  }
-
-  if (closeBtn) {
-    closeBtn.addEventListener('click', () => {
-      modal.classList.add('hidden');
-    });
-  }
-
-  // Close modal if user clicks outside the white box
-  modal.addEventListener('click', (event) => {
-    if (event.target === modal) {
-      modal.classList.add('hidden');
-    }
-  });
+  openBtn.onclick = () => modal.classList.remove('hidden');
+  closeBtn.onclick = () => modal.classList.add('hidden');
+  modal.onclick = (e) => { if (e.target === modal) modal.classList.add('hidden'); };
 }
 
-// --- Navigation & Start ---
-async function startQuiz() {
-  const welcome = document.getElementById('welcome-screen');
-  const main = document.getElementById('main-container');
-  const footer = document.getElementById('quiz-footer');
+// --- App Entry Point ---
 
-  welcome.classList.add('animate-out');
-
-  setTimeout(async () => {
-    welcome.classList.add('hidden');
-    // Hide footer during quiz
-    if (footer) footer.classList.add('hidden');
-
-    main.classList.remove('hidden');
-    main.classList.add('animate-in');
-
-    initFormulaModal();
-    await init();
-  }, 300);
-}
-
-// Handle the Next Button
-document.getElementById('next-btn').onclick = () => {
-  currentIdx++;
-  if (currentIdx < shuffledQuestions.length) {
-    showQuestion();
-    saveProgress();
-  } else {
-    finishQuiz();
-  }
-};
-
-// --- App Initialization & Button Logic ---
 document.addEventListener('DOMContentLoaded', () => {
   const startBtn = document.getElementById('start-quiz-btn');
-  const newQuizBtn = document.getElementById('new-quiz-btn');
-  const footer = document.getElementById('quiz-footer');
+  const quickBtn = document.getElementById('quick-20-btn');
+  const resumeBtn = document.getElementById('resume-btn');
 
-  // Check if there is a saved session in LocalStorage
+  // Resume check
   if (localStorage.getItem('fl_quiz_progress')) {
-    // 1. Change the primary button to "Resume Quiz" and style it green
-    startBtn.innerHTML = `Resume Quiz <i class="fa-solid fa-rotate-right ml-2 text-xs"></i>`;
-    startBtn.classList.remove('bg-blue-600', 'hover:bg-blue-700');
-    startBtn.classList.add('bg-green-600', 'hover:bg-green-700');
-
-    // 2. Reveal the "Start New Quiz" button by removing the 'hidden' class
-    if (newQuizBtn) {
-      newQuizBtn.classList.remove('hidden');
-    }
+    resumeBtn.classList.remove('hidden');
   }
 
-  // Handle "Resume / Take Quiz"
-  startBtn.onclick = startQuiz;
+  startBtn.onclick = () => { startQuizUI(); init(); };
+  quickBtn.onclick = () => { startQuizUI(); init(20); };
 
-  // Handle "Start New Quiz"
-  if (newQuizBtn) {
-    newQuizBtn.onclick = () => {
-      const confirmNew = confirm("This will delete your current progress. Are you sure you want to start a new quiz?");
-      if (confirmNew) {
-        clearSavedProgress(); // Removes progress from localStorage
-        location.reload();    // Hard reset to clear variables and start at the Welcome screen
-      }
-    };
-  }
+  resumeBtn.onclick = () => {
+    startQuizUI();
+    loadProgress();
+    document.getElementById('score').innerText = `SCORE: ${score}/${shuffledQuestions.length}`;
+    startTimer(seconds);
+    showQuestion();
+  };
 });
+
+// Add the Quick 20 event listener
+document.getElementById('quick-20-btn').onclick = () => {
+  startQuizUI();
+  init(20); // Passes the limit to the init function
+};
